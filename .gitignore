@@ -1,0 +1,4 @@
+config/.config/nvim/lazy-lock.json
+config/.config/nvim/.luarc.json
+
+config/.local/share/jdtls/configuration/*

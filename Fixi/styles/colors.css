@@ -1,0 +1,31 @@
+@define-color bar-bg-color rgba(0, 0, 0, 0);
+@define-color bubble-bg-color rgba(0, 0, 0, 0.3);
+@define-color bg-color rgb(0, 0, 0);
+@define-color hover-bg-color rgb(50, 50, 50);
+@define-color foreground rgb(19, 19, 19);
+@define-color text-color rgb(255, 255, 255);
+
+@define-color tooltip-bg-color rgba(0, 0, 0, 0.8);
+
+@define-color battery-normal rgb(47, 183, 35);
+@define-color battery-charging rgb(0, 155, 255);
+@define-color battery-critical rgb(250, 10, 10);
+@define-color battery-full rgb(190, 0, 255);
+
+@keyframes pulse {
+  0% {
+    color: @battery-critical;
+  }
+
+  30% {
+    color: @text-color;
+  }
+
+  70% {
+    color: @text-color;
+  }
+
+  100% {
+    color: @battery-critical;
+  }
+}

@@ -1,0 +1,33 @@
+levelbar block.filled {
+  background-image: linear-gradient(to right,
+      @battery-normal,
+      @battery-normal);
+  margin: 1px;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 1);
+}
+
+levelbar.charging block.filled {
+  background-image: linear-gradient(to right,
+      @battery-charging,
+      @battery-charging);
+}
+
+levelbar.low block.filled {
+  background-image: linear-gradient(to right,
+      @battery-critical,
+      @battery-critical);
+  margin: 5px 1px;
+}
+
+levelbar.full block.filled {
+  background-image: linear-gradient(to right,
+      @battery-full,
+      @battery-full);
+}
+
+levelbar trough {
+  background-image: linear-gradient(to right,
+      @bubble-bg-color,
+      @bubble-bg-color);
+  margin: 0;
+}

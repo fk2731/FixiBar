@@ -1,0 +1,13 @@
+/**
+ *
+* Author : Leonel Benítez (fk2731)
+ * Github : @fk2731
+ * 
+ * Colors
+ **/
+
+* {
+    background:     #000;
+    foreground:     #fff;
+    selected:       #191919;
+}

@@ -1,0 +1,27 @@
+@import url("./workspaces_and_dock.css");
+@import url("./colors.css");
+@import url("./battery.css");
+@import url("./buttons.css");
+@import url("./popups.css");
+@import url("./events.css");
+
+* {
+  font-family: "Adwaita Sans";
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 50px;
+  border: none;
+  background-color: @bar-bg-color;
+  color: @text-color;
+}
+
+.bubble {
+  background-color: @bubble-bg-color;
+  padding: 2px 8px;
+}
+
+#icon {
+  font-family: "tabler-icons";
+  font-size: 20px;
+  font-weight: normal;
+}

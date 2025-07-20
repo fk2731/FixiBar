@@ -1,0 +1,24 @@
+button {
+  transition: all 0.2s ease;
+  border: none;
+  background-image: none;
+  background-color: @foreground;
+  padding: 0 8px;
+}
+
+button:hover {
+  background-color: @hover-bg-color;
+}
+
+button.active {
+  background-color: white;
+  padding: 0 15px;
+}
+
+button.active>label {
+  color: @bg-color;
+}
+
+button>label {
+  padding: 0;
+}

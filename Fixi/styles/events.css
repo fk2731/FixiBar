@@ -1,0 +1,14 @@
+#event {
+  background-color: @bg-color;
+  min-height: 25px;
+  min-width: 40px;
+  transition: all 0.3s ease;
+}
+
+.stop {
+  animation: pulse 5s infinite ease;
+}
+
+.recording {
+  color: @text-color;
+}

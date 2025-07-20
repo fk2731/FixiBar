@@ -1,0 +1,5 @@
+#dock,
+#workspaces {
+  background-color: @bg-color;
+  padding: 3px 6px;
+}
