@@ -13,7 +13,7 @@ if [ "$EUID" -eq 0 ]; then
 fi
 
 #  --- Updating System ---
-sudo pacman -Syu --noconfirm
+sudo pacman -Syyu --noconfirm
 sudo pacman -S --needed base-devel git --noconfirm
 
 if [ -d "$REPO_DIR" ]; then
