@@ -63,7 +63,7 @@ install_yay() {
 
 install_yay_packages() {
   yay -Syy -Syy --pgp-import --needed --noconfirm ttf-jetbrains-mono-nerd hyprshot cava telegram-desktop \
-    swaync-git brave-bin rose-pine-cursor rose-pine-hyprcursor spotify grimblast python-psutil \
+    swaync-git brave-bin rose-pine-cursor rose-pine-hyprcursor spotify grimblast python-psutil nemo \
     python-setproctitle tesseract gpu-screen-recorder python-fabric-git celluloid jdk-openjdk || true
 }
 

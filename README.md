@@ -21,7 +21,6 @@ https://github.com/user-attachments/assets/eb8f77e7-56c7-42b3-b525-ddde123d1077
 - **Terminal**: Kitty
 - **Shell**: Zsh with Powerlevel10k
 - **Swaync** (Fixi Custom): Notification Center, BackLight Controller, Volume Controller
-- **Nautilus** (not customized)
 - **Bar** (FixiBar):
   - Workspaces
   - Memory Stats
@@ -37,7 +36,8 @@ https://github.com/user-attachments/assets/eb8f77e7-56c7-42b3-b525-ddde123d1077
   - SnapKit
   - Rofi
 - **Hyprpaper**
-- **HypTrlock** (Fixi Custom)
+- **Hyprlock** (Fixi Custom)
+- **File Manager**: Nemo (not customized)
 - **Display Manager**: SDDM (Fixi Custom)
 - **Boot Managaer**: rEFInd (Catppuccin Mocha)
 - **Plymouth** (Catppuccin Mocha)
@@ -85,8 +85,9 @@ https://github.com/user-attachments/assets/eb8f77e7-56c7-42b3-b525-ddde123d1077
 
 ### System
 
-| Action      | KeyBinds          |
-| :---------- | :---------------- |
-| Lock screen | Super + Shift + L |
+| Action         | KeyBinds          |
+| :------------- | :---------------- |
+| Launch FixiBar | Super + Shift + B |
+| Lock screen    | Super + Shift + L |
 
 ---
