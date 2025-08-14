@@ -10,15 +10,10 @@ button:hover {
   background-color: @hover-bg-color;
 }
 
-button.active {
-  background-color: white;
-  padding: 0 15px;
-}
-
-button.active>label {
+button.active > label {
   color: @bg-color;
 }
 
-button>label {
+button > label {
   padding: 0;
 }
