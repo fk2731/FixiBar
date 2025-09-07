@@ -9,10 +9,13 @@
   color: @text-color;
 }
 
-
 #workspaces button.active {
   background-color: white;
   padding: 0 15px;
+}
+
+#workspaces button.urgent {
+  background-color: @urgent-color;
 }
 
 #workspaces button.empty {
