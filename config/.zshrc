@@ -45,6 +45,7 @@ alias comm='git commit -m'
 alias push='git push'
 
 alias man='tldr'
+alias ogman='/usr/bin/man'
 
 sign-kernel() {
   echo "Signing Unsigned original image..."
