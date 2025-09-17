@@ -153,46 +153,26 @@ return {
   },
   {
     "mfussenegger/nvim-jdtls",
-    ft = { "java" },
+    ft = "java",
     config = function()
-      local jdtls_bin = vim.fn.expand("~/.local/share/jdtls/bin/jdtls")
-
-      -- Obtener el nombre del proyecto dinámicamente
-      local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-      local workspace_dir = "/tmp/jdtls/workspace/" .. project_name
-      vim.fn.mkdir(workspace_dir, "p") -- Crear el directorio de trabajo si no existe
-
+      local jdtls = require("jdtls")
       local config = {
-        cmd = {
-          jdtls_bin,
-          "-data",
-          workspace_dir,
-        },
-        root_dir = require("jdtls.setup").find_root({ ".git", "pom.xml", "build.gradle", "build.xml" }),
+        cmd = { "jdtls" },
+        root_dir = require("lspconfig.util").root_pattern(".git", "gradlew", "mvnw", "pom.xml"),
         settings = {
           java = {
             signatureHelp = { enabled = true },
             contentProvider = { preferred = "fernflower" },
-            hoverProvider = { enable = true },
+            hoverProvider = { enabled = true },
             import = {
-              gradle = {
-                enabled = true,
-                wrapper = {
-                  enabled = true,
-                },
-              },
+              gradle = { enabled = true, wrapper = { enabled = true } },
+              eclipse = { enabled = false },
             },
           },
-          capabilities = require("cmp_nvim_lsp").default_capabilities(),
         },
       }
-
-      vim.api.nvim_create_autocmd("FileType", {
-        pattern = "java",
-        callback = function()
-          require("jdtls").start_or_attach(config)
-        end,
-      })
+      jdtls.start_or_attach(config)
     end,
   },
+  capabilities = require("cmp_nvim_lsp").default_capabilities(),
 }
