@@ -70,10 +70,11 @@ https://github.com/user-attachments/assets/eb8f77e7-56c7-42b3-b525-ddde123d1077
 
   ![Plymouth Catppuccin Mocha](https://github.com/catppuccin/plymouth/blob/main/assets/mocha.webp "Plymouth Catppuccin Mocha")
 
-> [!NOTE]
->
-> - `lsd` as enhanced `ls` feature
-> - `tldr` as enhanced `man` feature
+  > [!NOTE]
+  >
+  > - `lsd` is an enhanced `ls` command
+  > - `tldr` is an enhanced `man` command
+  > - `ogman` is an alias for the original `man` command
 
 ## KeyBinds
 
