@@ -50,9 +50,9 @@ https://github.com/user-attachments/assets/eb8f77e7-56c7-42b3-b525-ddde123d1077
 
     ![PowerMenu](./utils/PowerMenu.png "Power Menu")
 
-  - SnapKit
+  - SnipKit
 
-    ![SnapKit](./utils/SnapKit.png "Snaping Tools")
+    ![SnipKit](./utils/SnapKit.png "Snaping Tools")
 
   - Rofi
 
@@ -89,7 +89,7 @@ https://github.com/user-attachments/assets/eb8f77e7-56c7-42b3-b525-ddde123d1077
 | Launch Brave          | Super + B |
 | Launch Spotify        | Super + M |
 | Launch Calculator     | Super + P |
-| Launch SnapKit        | Super + Z |
+| Launch SnipKit        | Super + Z |
 | Launch Power menu     | Super + W |
 | Open ChatGPT          | Super + F |
 | Open Copilot          | Super + G |
@@ -120,3 +120,4 @@ https://github.com/user-attachments/assets/eb8f77e7-56c7-42b3-b525-ddde123d1077
 | Lock screen    | Super + Shift + L |
 
 ---
+
