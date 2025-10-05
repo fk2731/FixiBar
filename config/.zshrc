@@ -31,6 +31,9 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=nvim
 
+export JAVA_HOME=/usr/lib/jvm/java-21-jdk
+export PATH=$JAVA_HOME/bin:$PATH
+
 # Alias
 alias ls='lsd'
 alias lst='lsd --tree'
@@ -60,4 +63,12 @@ sign-kernel() {
 
 clear-dependencies() {
   sudo pacman -Rns $(pacman -Qdtq)
+}
+
+update-system() {
+  echo "Updating system..."
+  sudo pacman -Syu
+  sign-kernel
+  echo "Clearing dependencies..."
+  clear-dependencies
 }
