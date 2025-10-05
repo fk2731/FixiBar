@@ -64,7 +64,7 @@ install_yay() {
 install_yay_packages() {
 	yay -Syy -Syy --pgp-import --needed --noconfirm ttf-jetbrains-mono-nerd hyprshot cava telegram-desktop \
 		swaync-git vivaldi rose-pine-cursor rose-pine-hyprcursor spotify grimblast python-psutil nemo \
-		python-setproctitle tesseract gpu-screen-recorder python-fabric-git celluloid jdk-lts jdtls || true
+		python-setproctitle tesseract gpu-screen-recorder python-fabric-git celluloid jdk-lts jdtls fastfetch || true
 }
 
 setup_zsh() {

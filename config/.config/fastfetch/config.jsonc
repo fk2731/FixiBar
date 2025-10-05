@@ -1,0 +1,160 @@
+{
+  "logo": {
+    "source": "~/.config/fastfetch/fixiFF.png",
+    "type": "kitty",
+    "height": 16,
+    "width": 34,
+    "padding": {
+      "top": 6,
+      "left": 1,
+    },
+  },
+  "modules": [
+    "break",
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[1;30;44m     I use Arch BTW 󰣇    ",
+    },
+    "break",
+    {
+      "type": "dateTime",
+      "key": "  Time",
+      "format": "{hour-pretty}:{minute-pretty} ",
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[95m┌──────────────────────────  Hardware ──────────────────────────────────────┐",
+    },
+    {
+      "type": "title",
+      "key": "  Device",
+      "keyColor": "92",
+    },
+    {
+      "type": "Chassis",
+      "key": "│ ├󰌢 Chassis",
+      "keyColor": "92",
+      "format": "{1}",
+    },
+    {
+      "type": "cpu",
+      "key": "│ ├󰍛 CPU",
+      "showPeCoreCount": true,
+      "format": "{1}",
+      "keyColor": "92",
+    },
+    {
+      "type": "gpu",
+      "key": "│ ├󰍛 GPU",
+      "keyColor": "92",
+    },
+    {
+      "type": "memory",
+      "key": "│ ├󰍛 Memory",
+      "keyColor": "92",
+      "percent": {
+        "type": 3,
+        "green": 30,
+        "yellow": 70,
+      },
+    },
+    {
+      "type": "physicalDisk",
+      "key": "│ ├󰍛 Disk",
+      "keyColor": "92",
+    },
+    {
+      "type": "battery",
+      "key": "└ └󱟣 Battery",
+      "keyColor": "92",
+      "percent": {
+        "type": 3,
+        "yellow": 30,
+        "green": 70,
+      },
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[95m└────────────────────────────────────────────────────────────────────────────┘",
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[93m┌──────────────────────────  Software ──────────────────────────────────────┐",
+    },
+    {
+      "type": "os",
+      "key": "  OS",
+      "keyColor": "93",
+    },
+    {
+      "type": "packages",
+      "key": "│ ├󰏖 Packages",
+      "keyColor": "93",
+    },
+    {
+      "type": "shell",
+      "key": "│ ├ Shell",
+      "format": "{1}",
+      "keyColor": "93",
+    },
+    {
+      "type": "terminal",
+      "key": "│ ├ Terminal",
+      "keyColor": "93",
+      "format": "{1}",
+    },
+    {
+      "type": "terminalFont",
+      "key": "│ ├󰛖 Terminal Font",
+      "keyColor": "93",
+      "format": "{1}",
+    },
+    {
+      "type": "uptime",
+      "key": "└ └󱎓 Uptime",
+      "keyColor": "93",
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[93m└────────────────────────────────────────────────────────────────────────────┘",
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[94m┌─────────────────────────  Environment ────────────────────────────────────┐",
+    },
+    {
+      "type": "Bootmgr",
+      "key": "│ ├ Bootmgr",
+      "keyColor": "94",
+      "format": "{1}",
+    },
+    {
+      "type": "de",
+      "key": "│ ├ DesktopEnviroment",
+      "keyColor": "94",
+    },
+    {
+      "type": "lm",
+      "key": "│ ├ DisplayManager",
+      "keyColor": "94",
+    },
+    {
+      "type": "wm",
+      "key": "│ ├ WindowManager",
+      "keyColor": "94",
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[94m└────────────────────────────────────────────────────────────────────────────┘",
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "                \u001b[90m  \u001b[91m  \u001b[92m  \u001b[93m  \u001b[94m  \u001b[95m  \u001b[96m  \u001b[97m ",
+    },
+    "break",
+  ],
+}
