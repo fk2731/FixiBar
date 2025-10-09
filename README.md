@@ -9,6 +9,20 @@
 
 ---
 
+## Repository Structure
+
+Here’s a brief overview of the main folders and files:
+
+- `boot/` → Boot-related configurations (rEFInd, Plymouth themes, etc.)
+- `config/` → General system and app configs
+- `Fixi/` → Fixi Custom scripts and modules (Bar, Widgets, etc.)
+- `login/` → Login related configs (SDDM tweaks)
+- `pacman.conf` → Pacman package manager configuration
+- `setup.sh` → Installation script for Arch Linux
+- `utils/` → Screenshots
+
+---
+
 > [!CAUTION]
 > Takes a fair amount of energy, still...
 
@@ -120,5 +134,3 @@ https://github.com/user-attachments/assets/eb8f77e7-56c7-42b3-b525-ddde123d1077
 | Lock screen    | Super + Shift + L |
 
 ---
-
-
