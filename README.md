@@ -23,9 +23,6 @@ Here’s a brief overview of the main folders and files:
 
 ---
 
-> [!CAUTION]
-> Takes a fair amount of energy, still...
-
 https://github.com/user-attachments/assets/eb8f77e7-56c7-42b3-b525-ddde123d1077
 
 ## Features

@@ -25,7 +25,7 @@ class CalendarWidget(Gtk.Box):
         add_hover_cursor(self.eventbox)
         self.eventbox.connect("button-press-event", self.toggle_popup)
 
-        GLib.timeout_add_seconds(1600, self.update_date)
+        GLib.timeout_add_seconds(5000, self.update_date)
 
     def toggle_popup(self, widget, event):
         if self.popup and self.popup.get_visible():
