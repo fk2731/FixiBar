@@ -1,50 +1,133 @@
 {
   "$schema": "/etc/xdg/swaync/configSchema.json",
-
+  "ignore-gtk-theme": true,
   "positionX": "right",
   "positionY": "top",
+  "layer": "overlay",
+  "control-center-layer": "top",
+  "layer-shell": true,
+  "layer-shell-cover-screen": false,
+  "cssPriority": "highest",
   "control-center-margin-top": 0,
   "control-center-margin-bottom": 0,
   "control-center-margin-right": 0,
   "control-center-margin-left": 0,
-  "control-center-width": 500,
-  "control-center-height": 600,
-  "fit-to-screen": true,
-
-  "layer-shell": true,
-  "layer": "overlay",
-  "control-center-layer": "overlay",
-  "cssPriority": "user",
-  "notification-icon-size": 64,
+  "notification-2fa-action": true,
+  "notification-inline-replies": false,
   "notification-body-image-height": 100,
   "notification-body-image-width": 200,
-  "notification-inline-replies": true,
-  "timeout": 3,
-  "timeout-low": 2.5,
-  "timeout-critical": 3,
+  "timeout": 9,
+  "timeout-low": 6,
+  "timeout-critical": 0,
+  "fit-to-screen": true,
+  "relative-timestamps": true,
+  "control-center-width": 500,
+  "control-center-height": 600,
   "notification-window-width": 500,
   "keyboard-shortcuts": true,
-  "image-visibility": "always",
+  "notification-grouping": true,
+  "image-visibility": "when-available",
   "transition-time": 200,
-  "hide-on-clear": true,
+  "hide-on-clear": false,
   "hide-on-action": true,
+  "text-empty": "No Notifications",
   "script-fail-notify": true,
-
-  "widgets": ["backlight", "volume", "title", "notifications"],
+  "notification-visibility": {
+    "example-name": {
+      "state": "muted",
+      "urgency": "Low",
+      "app-name": "Spotify"
+    }
+  },
+  "widgets": [
+    "title",
+    "buttons-grid",
+    "mpris",
+    "volume",
+    "backlight",
+    "dnd",
+    "notifications"
+  ],
   "widget-config": {
-    "volume": {
-      "slider": true,
-      "label": "󱑽 "
-    },
-    "backlight": {
-      "slider": true,
-      "label": " ",
-      "device": "amdgpu_bl1"
+    "notifications": {
+      "vexpand": true
     },
     "title": {
-      "label": "",
+      "text": "Notifications",
       "clear-all-button": true,
       "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "mpris": {
+      "autohide": false,
+      "show-album-art": "always",
+      "loop-carousel": true
+    },
+    "backlight": {
+      "device": "amdgpu_bl1",
+      "label": "\ueb7e",
+      "slider": true,
+      "min": 10
+    },
+    "volume": {
+      "device": "default",
+      "label": "\ueb51",
+      "slider": true
+    },
+    "buttons-grid": {
+      "buttons-per-row": 4,
+      "actions": [
+        {
+          "label": "\uea37",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c 'flatpak run io.github.kaii_lb.Overskride'"
+        },
+        {
+          "label": "\ueb52",
+          "type": "button",
+          "active": true,
+          "command": "swaync-client -t -sw;sleep 0.5;sh -c '~/.dotfiles/config/.config/rofi/scripts/rofi-wifi.sh'"
+        },
+        {
+          "label": "\ueb0d",
+          "type": "button",
+          "active": true,
+          "command": "sh -c ' killall FixiApp || python3 ~/.dotfiles/Fixi/apps/fixiPower.py'"
+        },
+        {
+          "label": "\uea7a",
+          "type": "toggle",
+          "active": true,
+          "command": "swaync-client -t -sw;sh -c '~/.dotfiles/config/.config/rofi/scripts/rofi-cliphist.sh'"
+        },
+        {
+          "label": "\ufaf8",
+          "type": "toggle",
+          "active": true,
+          "command": "hyprshade toggle blue-light-filter"
+        },
+        {
+          "label": "\ueaea",
+          "type": "button",
+          "active": true,
+          "command": "swaync-client -t -sw;sh -c 'killall FixiApp || python3 ~/.dotfiles/Fixi/apps/fixiTools.py'"
+        },
+        {
+          "label": "\uea45",
+          "type": "button",
+          "active": true,
+          "command": "swaync-client -t -sw;sh -c 'rofi -show drun'"
+        },
+        {
+          "label": "\ufb26",
+          "type": "button",
+          "active": true,
+          "command": "swaync-client -t -sw;sh -c 'rofi -show calc -no-show-match -no-sort'"
+        }
+      ]
     }
   }
 }

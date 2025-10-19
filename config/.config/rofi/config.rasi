@@ -10,11 +10,13 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,calc";
+	modi:                       "drun,calc,window";
     show-icons:                 true;
     display-drun:               "drun :";
 	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-	window-format:              "{w} · {c} · {t}";
+  show-icons: true;
+  icon-theme: "hicolor";
+	window-format:              "{w} {t}";
 }
 
 /*****----- Global Properties -----*****/

@@ -20,6 +20,7 @@ from modules.player import Player
 from modules.recorder_indicator import RecorderIndicator
 from modules.volume import VolumeWidget
 from modules.workspaces import WorkspacesWidget
+from modules.notifications import NotificationWidget
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -75,6 +76,10 @@ class BarDef(Gtk.Window):
         self.date_time.pack_start(CalendarWidget(), False, False, 0)
         self.date_time.pack_start(ClockWidget(), False, False, 0)
 
+        self.notify = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
+        self.notify.get_style_context().add_class("bubble")
+        self.notify.pack_start(NotificationWidget(), False, False, 0)
+
         self.main_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=5)
         self.main_box.pack_start(WorkspacesWidget(), False, False, 0)
         self.main_box.pack_start(self.left_box, False, False, 0)
@@ -83,6 +88,7 @@ class BarDef(Gtk.Window):
         self.main_box.pack_start(RecorderIndicator(), False, False, 0)
         self.main_box.pack_start(self.rigth_box, False, False, 0)
         self.main_box.pack_start(self.date_time, False, False, 0)
+        self.main_box.pack_start(self.notify, False, False, 0)
         self.main_box.pack_start(
             BatteryWidget(), False, False, 0
         )  # Add BatteryWidget to the right side looks better
