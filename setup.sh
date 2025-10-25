@@ -65,7 +65,15 @@ install_yay_packages() {
 	yay -Syy -Syy --pgp-import --needed --noconfirm ttf-jetbrains-mono-nerd hyprshot cava telegram-desktop \
 		swaync-git vivaldi rose-pine-cursor rose-pine-hyprcursor spotify grimblast python-psutil nemo \
 		python-setproctitle tesseract gpu-screen-recorder python-fabric-git celluloid jdk-lts jdtls fastfetch \
-		hyprshade cliphist inter-font swayosd-git || true
+		hyprshade cliphist inter-font swayosd-git ddcutil || true
+}
+
+ddcutil_setup() {
+	#Add user to i2c and ddcutil groups
+	sudo modprobe i2c-dev\n
+	sudo usermod -aG i2c $USER\n
+	#Add user to ddcutil group
+	sudo usermod -aG ddcutil "$USER"
 }
 
 swayosd_setup() {

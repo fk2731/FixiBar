@@ -147,10 +147,9 @@ class BatteryWidget(Gtk.Box):
                     subprocess.Popen(
                         [
                             "notify-send",
-                            "-a",
-                            "FixiBar",
-                            "-u",
-                            "low",
+                            "-e",
+                            "-h",
+                            "string:x-canonical-private-synchronous:battery-low",
                             "Battery Low",
                             "Please connect your charger.",
                             "-i",

@@ -4,7 +4,7 @@ move=false
 
 # If Spotify is already open, notify and exit
 if [[ -n $(hyprctl -j clients | jq -r '.[] | select(.class == "Spotify")') ]]; then
-	notify-send -a "Fixi" -u low "Already open" -i /usr/share/icons/hicolor/48x48/apps/spotify.png "Spotify open at workspace: $(hyprctl -j clients | jq -r '.[] | select(.class == "Spotify") | .workspace.id')"
+	notify-send -e -h string:x-canonical-private-synchronous:spotify -u low "Already open" -i /usr/share/icons/hicolor/48x48/apps/spotify.png "Spotify open at workspace: $(hyprctl -j clients | jq -r '.[] | select(.class == "Spotify") | .workspace.id')"
 	exit 0
 fi
 
