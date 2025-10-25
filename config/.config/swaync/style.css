@@ -589,14 +589,16 @@ blankwindow {
 .widget-buttons-grid label {
   font-size: 1.6rem;
   font-weight: 600;
-  margin: 9px 0 9px 0; /* top right bottom left */
+  /* margin: 9px 0 9px 0; /1* top right bottom left *1/ */
+  margin: 0;
+  padding: 0;
 }
 
 .widget-buttons-grid flowbox > flowboxchild > button {
   padding: 0;
   box-shadow: var(--mpris-album-art-shadow);
   border-radius: var(--border-radius);
-  margin: 0 3px 0 3px; /* top right bottom left */
+  /* margin: 0 3px 0 3px; /1* top right bottom left *1/ */
   border: 1px solid rgba(255, 255, 255, 0.12); /* borde suave */
   box-shadow: var(--3d-shadow);
   transition: all 0.26s ease;
@@ -608,7 +610,7 @@ blankwindow {
 }
 
 .widget-buttons-grid flowbox > flowboxchild:hover {
-  background: none;
+  border-radius: var(--border-radius);
 }
 
 .widget-buttons-grid flowbox > flowboxchild:first-child {

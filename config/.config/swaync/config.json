@@ -77,7 +77,7 @@
       "slider": true
     },
     "buttons-grid": {
-      "buttons-per-row": 6,
+      "buttons-per-row": 4,
       "actions": [
         {
           "label": "   \uea37 Bluetooth   ",
