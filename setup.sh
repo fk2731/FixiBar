@@ -65,7 +65,13 @@ install_yay_packages() {
 	yay -Syy -Syy --pgp-import --needed --noconfirm ttf-jetbrains-mono-nerd hyprshot cava telegram-desktop \
 		swaync-git vivaldi rose-pine-cursor rose-pine-hyprcursor spotify grimblast python-psutil nemo \
 		python-setproctitle tesseract gpu-screen-recorder python-fabric-git celluloid jdk-lts jdtls fastfetch \
-		hyprshade cliphist inter-font || true
+		hyprshade cliphist inter-font swayosd-git || true
+}
+
+swayosd_setup() {
+	if ! sudo systemctl status swayosd-libinput-backend.service &>/dev/null; then
+		sudo systemctl enable --now swayosd-libinput-backend.service
+	fi
 }
 
 setup_zsh() {
