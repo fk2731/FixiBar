@@ -16,11 +16,11 @@ from modules.calendar_widget import CalendarWidget
 from modules.clock import ClockWidget
 from modules.memory import MemoryWidget
 from modules.net import NetworkWidget
+from modules.notifications import NotificationWidget
 from modules.player import Player
 from modules.recorder_indicator import RecorderIndicator
 from modules.volume import VolumeWidget
 from modules.workspaces import WorkspacesWidget
-from modules.notifications import NotificationWidget
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -35,6 +35,7 @@ class BarDef(Gtk.Window):
         self.set_type_hint(Gdk.WindowTypeHint.DOCK)
 
         GtkLayerShell.init_for_window(self)
+        GtkLayerShell.set_namespace(self, "FixiBar")
 
         display = Gdk.Display.get_default()
         monitor = None

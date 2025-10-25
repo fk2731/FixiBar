@@ -10,4 +10,5 @@ calendar {
 
 calendar:selected {
   background-color: @foreground;
+  box-shadow: inset 0 0px 3px rgba(255, 255, 255, 0.1); /* x y blur color */
 }
