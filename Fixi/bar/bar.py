@@ -4,6 +4,7 @@ import signal
 
 import gi
 import setproctitle
+import subprocess
 
 gi.require_version("Gtk", "3.0")
 gi.require_version("Gdk", "3.0")
@@ -24,7 +25,7 @@ from modules.workspaces import WorkspacesWidget
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 
-from config import BAR_HEIGHT, CSS_FILE, TOP_MARGIN
+from config import BAR_HEIGHT, CSS_FILE, TOP_MARGIN, add_hover_cursor
 
 
 class BarDef(Gtk.Window):
@@ -62,32 +63,41 @@ class BarDef(Gtk.Window):
         self.set_size_request(-1, BAR_HEIGHT)
         self.set_name("bar")
 
+        #Memory Box - left side
         self.left_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
         self.left_box.get_style_context().add_class("bubble")
         self.left_box.pack_start(MemoryWidget(), False, False, 0)
 
-        self.rigth_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
-        self.rigth_box.get_style_context().add_class("bubble")
-        self.rigth_box.pack_start(VolumeWidget(), False, False, 0)
-        self.rigth_box.pack_start(BluetoothWidget(), False, False, 0)
-        self.rigth_box.pack_start(NetworkWidget(), False, False, 0)
+        #Connections Box - right side
+        self.eventbox = Gtk.EventBox()
+        self.connections = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
+        self.connections.get_style_context().add_class("bubble")
+        self.connections.pack_start(VolumeWidget(), False, False, 0)
+        self.connections.pack_start(BluetoothWidget(), False, False, 0)
+        self.connections.pack_start(NetworkWidget(), False, False, 0)
+        self.eventbox.add(self.connections)
+        self.eventbox.connect("button-press-event", self.connections_event)
+        add_hover_cursor(self.eventbox)
 
+        #date_time Box - right side
         self.date_time = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
         self.date_time.get_style_context().add_class("bubble")
         self.date_time.pack_start(CalendarWidget(), False, False, 0)
         self.date_time.pack_start(ClockWidget(), False, False, 0)
 
+        #notifications Box - right side
         self.notify = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
         self.notify.get_style_context().add_class("bubble")
         self.notify.pack_start(NotificationWidget(), False, False, 0)
 
+        #Bar
         self.main_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=5)
         self.main_box.pack_start(WorkspacesWidget(), False, False, 0)
         self.main_box.pack_start(self.left_box, False, False, 0)
         self.main_box.pack_start(Player(), False, False, 0)
         self.main_box.pack_start(Gtk.Box(), True, True, 0)
         self.main_box.pack_start(RecorderIndicator(), False, False, 0)
-        self.main_box.pack_start(self.rigth_box, False, False, 0)
+        self.main_box.pack_start(self.eventbox, False, False, 0)
         self.main_box.pack_start(self.date_time, False, False, 0)
         self.main_box.pack_start(self.notify, False, False, 0)
         self.main_box.pack_start(
@@ -106,6 +116,8 @@ class BarDef(Gtk.Window):
 
         self.show_all()
 
+    def connections_event(self, widget, event):
+        subprocess.run(["swaync-client", "-t", "-sw"])
 
 signal.signal(signal.SIGINT, signal.SIG_DFL)
 

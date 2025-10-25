@@ -8,25 +8,18 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gdk, GLib, Gtk  # type: ignore
 
-from config import add_hover_cursor
 
-
-class NetworkWidget(Gtk.EventBox):
+class NetworkWidget(Gtk.Box):
     def __init__(self):
-        super().__init__()
-        self.set_visible_window(False)
+        super().__init__(orientation=Gtk.Orientation.HORIZONTAL, spacing=2)
 
         # Contenedor interno
         self.box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=3)
         self.icon = Gtk.Label(name="icon")
         self.label = Gtk.Label()
 
-        self.box.pack_start(self.icon, False, False, 0)
-        self.box.pack_start(self.label, True, True, 0)
-        self.add(self.box)
-
-        self.connect("button-press-event", self._on_click)
-        add_hover_cursor(self)
+        self.pack_start(self.icon, False, False, 0)
+        self.pack_start(self.label, True, True, 0)
 
         # Inicializa con estado actual
         self.update_network()
@@ -34,12 +27,6 @@ class NetworkWidget(Gtk.EventBox):
         # Hilo que escucha los cambios en red
         thread = threading.Thread(target=self.monitor_network, daemon=True)
         thread.start()
-
-    def _on_click(self, widget, event):
-        if event.type == Gdk.EventType.BUTTON_PRESS and event.button == 1:
-            subprocess.run(
-                "~/.dotfiles/config/.config/rofi/scripts/rofi-wifi.sh", shell=True
-            )
 
     # -------------------------------
     #  Monitoreo reactivo
