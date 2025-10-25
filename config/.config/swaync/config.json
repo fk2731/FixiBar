@@ -77,19 +77,13 @@
       "slider": true
     },
     "buttons-grid": {
-      "buttons-per-row": 4,
+      "buttons-per-row": 6,
       "actions": [
         {
-          "label": "\uea37",
-          "type": "toggle",
-          "active": true,
-          "command": "sh -c 'flatpak run io.github.kaii_lb.Overskride'"
-        },
-        {
-          "label": "\ueb52",
+          "label": "   \uea37 Bluetooth   ",
           "type": "button",
           "active": true,
-          "command": "swaync-client -t -sw;sleep 0.5;sh -c '~/.dotfiles/config/.config/rofi/scripts/rofi-wifi.sh'"
+          "command": "sh -c 'flatpak run io.github.kaii_lb.Overskride'"
         },
         {
           "label": "\ueb0d",
@@ -99,15 +93,21 @@
         },
         {
           "label": "\uea7a",
-          "type": "toggle",
+          "type": "button",
           "active": true,
           "command": "swaync-client -t -sw;sh -c '~/.dotfiles/config/.config/rofi/scripts/rofi-cliphist.sh'"
         },
         {
           "label": "\ufaf8",
           "type": "toggle",
-          "active": true,
+          "active": false,
           "command": "hyprshade toggle blue-light-filter"
+        },
+        {
+          "label": "   \ueb52 Ethernet   ",
+          "type": "button",
+          "active": true,
+          "command": "swaync-client -t -sw;sleep 0.5;sh -c '~/.dotfiles/config/.config/rofi/scripts/rofi-wifi.sh'"
         },
         {
           "label": "\ueaea",

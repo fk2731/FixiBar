@@ -1,5 +1,5 @@
 :root {
-  --cc-bg: rgba(100, 100, 100, 0.5);
+  --cc-bg: rgba(120, 120, 120, 0.5);
   --noti-bg: 110, 110, 110;
   --noti-bg-alpha: 0.3;
   --noti-bg-focus: rgba(130, 130, 130, 0.3);
@@ -28,10 +28,13 @@
   --mpris-button-hover: rgba(0, 0, 0, 0.5);
   --mpris-album-art-icon-size: 96px;
   --mpris-album-art-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+
+  --3d-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.15), 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Fallback for older CSS themes */
-@define-color cc-bg rgba(100,100,100, 0.3);
+@define-color cc-bg rgba(120,120,120, 0.3);
 @define-color noti-bg rgba(130, 130, 130, 0.3);
 @define-color noti-bg-focus rgba(68, 68, 68, 0.6);
 @define-color noti-close-bg rgba(255, 255, 255, 0.1);
@@ -441,7 +444,7 @@ blankwindow {
 }
 
 .control-center .control-center-list .notification {
-  box-shadow: var(--notification-shadow);
+  box-shadow: var(--3d-shadow);
 }
 
 .control-center .control-center-list .notification .notification-default-action,
@@ -484,11 +487,17 @@ blankwindow {
 
 .widget-title > button {
   border-radius: var(--border-radius);
-  box-shadow: var(--notification-shadow);
+  box-shadow: var(--3d-shadow);
+  transition: all 0.26s ease;
+}
+
+.widget-title > button:hover {
+  transform: translateY(-2px);
+  transform: scale(1.05);
 }
 
 .widget-title > button.text-button {
-  padding: 4px 15px;
+  padding: 6px 35px;
   font-size: var(--font-size-icon);
 }
 
@@ -517,6 +526,8 @@ blankwindow {
 .widget-mpris {
   padding: 0;
   /* The parent to all players */
+  margin-top: 0;
+  border-radius: var(--border-radius);
 }
 
 .widget-mpris .widget-mpris-player {
@@ -550,19 +561,24 @@ blankwindow {
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-subtitle {
+  fonrt-weight: normal;
   font-size: 1.1rem;
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay > box > button {
   /* Change player control buttons */
+  box-shadow: var(--3d-shadow);
+  transition: all 0.26s ease;
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay > box > button:hover {
-  background-color: var(--mpris-button-hover);
+  transform: translateY(-2px);
+  transform: scale(1.06);
 }
 
 .widget-mpris > box > button {
   /* Change player side buttons */
+  border-radius: var(--border-radius);
 }
 
 .widget-mpris > box > button:disabled {
@@ -571,11 +587,32 @@ blankwindow {
 
 /* Buttons widget */
 .widget-buttons-grid label {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 9px 0 9px 0; /* top right bottom left */
 }
-.widget-buttons-grid flowboxchild > button {
+
+.widget-buttons-grid flowbox > flowboxchild > button {
+  padding: 0;
+  box-shadow: var(--mpris-album-art-shadow);
   border-radius: var(--border-radius);
-  background: var(--noti-close-bg-hover);
+  margin: 0 3px 0 3px; /* top right bottom left */
+  border: 1px solid rgba(255, 255, 255, 0.12); /* borde suave */
+  box-shadow: var(--3d-shadow);
+  transition: all 0.26s ease;
+}
+
+.widget-buttons-grid flowbox > flowboxchild > button:hover {
+  transform: translateY(-2px);
+  transform: scale(1.05);
+}
+
+.widget-buttons-grid flowbox > flowboxchild:hover {
+  background: none;
+}
+
+.widget-buttons-grid flowbox > flowboxchild:first-child {
+  margin-bottom: 3px;
 }
 
 .widget-buttons-grid flowboxchild > button.toggle:checked {
@@ -672,7 +709,8 @@ blankwindow {
 .widget-volume slider,
 .widget-backlight slider {
   padding: 2px;
-  background-color: var(--noti-close-bg);
+  background-color: var(--noti-close-bg-hover);
+  box-shadow: var(--3d-shadow);
   opacity: 0.6;
   filter: blur(1px);
 }
