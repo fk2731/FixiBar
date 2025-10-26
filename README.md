@@ -37,7 +37,10 @@ https://github.com/user-attachments/assets/8aa0e5f4-fde3-4fd8-ad12-6978b12be9a0
 
 - **Terminal**: Kitty
 - **Shell**: Zsh with Powerlevel10k
-- **Swaync** (Fixi Custom): Notification Center, BackLight Controller, Volume Controller
+- **Swaync** (Fixi Theme): Notification Center, BackLight Controller, Volume Controller, Mpris Module, Buttons Grid
+
+  ![Swaync Fixi Theme](./utils/swaync.png)
+
 - **Bar** (FixiBar):
 
   ![FixiBar](./utils/FixiBar.png "FixiBar")
@@ -50,7 +53,10 @@ https://github.com/user-attachments/assets/8aa0e5f4-fde3-4fd8-ad12-6978b12be9a0
   - Time, date and calendar
   - Battery indicator (if needed)
 
-    ![Battery Indicator](./utils/BatteryIndicator.png)
+    ![Battery Indicator Plug](./utils/Charge_indicator.png)
+    ![Battery Indicator Plug Off](./utils/plug_off_indicator.png)
+    ![Battery Low Indicator](./utils/battery_low_indicator.png)
+    ![Battery Care Indicator](./utils/care_indicator.png)
 
 - **Widgets** (Fixi Custom):
   - Calculator
@@ -70,9 +76,12 @@ https://github.com/user-attachments/assets/8aa0e5f4-fde3-4fd8-ad12-6978b12be9a0
     ![RofiLauncher](./utils/RofiApps.png "Rofi Launcher Application")
 
 - **Hyprpaper**
-- **Hyprlock** (Fixi Custom)
+- **Hyprlock** (Fixi Theme)
+
+  ![Hyprlock Fixi Theme](./utils/hyprlock.png)
+
 - **File Manager**: Nemo (not customized)
-- **Display Manager**: SDDM (Fixi Custom)
+- **Display Manager**: SDDM (Fixi Theme)
 - **Boot Managaer**: rEFInd (Catppuccin Mocha)
 
   ![Refind Catppuccin Mocha](https://github.com/catppuccin/refind/blob/main/assets/previews/mocha.webp "Plymouth Catppuccin Mocha")
@@ -81,7 +90,7 @@ https://github.com/user-attachments/assets/8aa0e5f4-fde3-4fd8-ad12-6978b12be9a0
 
   ![Plymouth Catppuccin Mocha](https://github.com/catppuccin/plymouth/blob/main/assets/mocha.webp "Plymouth Catppuccin Mocha")
 
-  > [!NOTE]
+  > [!INFO]
   >
   > - `lsd` is an enhanced `ls` command
   > - `tldr` is an enhanced `man` command
@@ -131,4 +140,3 @@ https://github.com/user-attachments/assets/8aa0e5f4-fde3-4fd8-ad12-6978b12be9a0
 | Lock screen    | Super + Shift + L |
 
 ---
-
