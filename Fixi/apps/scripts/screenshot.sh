@@ -22,7 +22,7 @@ m) grimblast save output "$full_path" ;;
 	;;
 esac
 
-ACTION=$(notify-send -e -h string:x-canonical-private-synchronous:volume -i "$full_path" "Screenshot saved" "in $full_path" \
+ACTION=$(notify-send -e -h string:x-canonical-private-synchronous:Screenshot -i "$full_path" "Screenshot saved" "in $full_path" \
 	-A "view=View" -A "save=Save" -A "copy=Copy" -t 2500)
 
 case "$ACTION" in

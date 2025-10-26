@@ -1,28 +1,28 @@
 #!/usr/bin/env bash
 
 if [ -z "$XDG_VIDEOS_DIR" ]; then
-  XDG_VIDEOS_DIR="$HOME/Videos"
+	XDG_VIDEOS_DIR="$HOME/Videos"
 fi
 
 SAVE_DIR="$XDG_VIDEOS_DIR/Recordings"
 mkdir -p "$SAVE_DIR"
 
 if pgrep -f "gpu-screen-recorder" >/dev/null; then
-  pkill -SIGINT -f "gpu-screen-recorder"
-  sleep 1
+	pkill -SIGINT -f "gpu-screen-recorder"
+	sleep 1
 
-  VIDEO=$(ls -t "$SAVE_DIR"/*.mp4 2>/dev/null | head -n 1)
-  ICON=$HOME/.dotfiles/Fixi/apps/scripts/icons/movie.svg
+	VIDEO=$(ls -t "$SAVE_DIR"/*.mp4 2>/dev/null | head -n 1)
+	ICON=$HOME/.dotfiles/Fixi/apps/scripts/icons/movie.svg
 
-  ACTION=$(notify-send -e -h string:x-canonical-private-synchronous:volume "  Recording stopped" \
-    -A "view=View" -A "open=Open folder" -i "$ICON")
+	ACTION=$(notify-send -e -h string:x-canonical-private-synchronous:Recording "  Recording stopped" \
+		-A "view=View" -A "open=Open folder" -i "$ICON")
 
-  if [ "$ACTION" = "view" ] && [ -n "$VIDEO" ]; then
-    xdg-open "$VIDEO"
-  elif [ "$ACTION" = "open" ]; then
-    xdg-open "$SAVE_DIR"
-  fi
-  exit 0
+	if [ "$ACTION" = "view" ] && [ -n "$VIDEO" ]; then
+		xdg-open "$VIDEO"
+	elif [ "$ACTION" = "open" ]; then
+		xdg-open "$SAVE_DIR"
+	fi
+	exit 0
 fi
 
 # Obtener lista de monitores desde Hyprland
