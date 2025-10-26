@@ -12,10 +12,10 @@ if pgrep -f "gpu-screen-recorder" >/dev/null; then
   sleep 1
 
   VIDEO=$(ls -t "$SAVE_DIR"/*.mp4 2>/dev/null | head -n 1)
-  ICON=$HOME/widgets/apps/scripts/icons/movie.svg
+  ICON=$HOME/.dotfiles/Fixi/apps/scripts/icons/movie.svg
 
-  ACTION=$(notify-send -u low -a "FixiApp" "  Recording stopped" \
-    -A "view=View" -A "open=Open folder" -i "$ICON" -t 2500)
+  ACTION=$(notify-send -e -h string:x-canonical-private-synchronous:volume "  Recording stopped" \
+    -A "view=View" -A "open=Open folder" -i "$ICON")
 
   if [ "$ACTION" = "view" ] && [ -n "$VIDEO" ]; then
     xdg-open "$VIDEO"
@@ -29,7 +29,7 @@ fi
 MONITORS=$(hyprctl monitors | grep "Monitor" | awk '{print $2}')
 SELECTED=$(echo "$MONITORS" | rofi -dmenu -p "Monitor to record")
 
-[ -z "$SELECTED" ] && notify-send -u low "No monitor selected" && exit 1
+[ -z "$SELECTED" ] && notify-send -e "No monitor selected" && exit 1
 
 OUTPUT_FILE="$SAVE_DIR/$(date +%Y-%m-%d-%H-%M-%S).mp4"
 

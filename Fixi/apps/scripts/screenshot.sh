@@ -3,7 +3,7 @@
 sleep 0.25
 
 if [ -z "$XDG_PICTURES_DIR" ]; then
-  XDG_PICTURES_DIR="$HOME/Pictures"
+	XDG_PICTURES_DIR="$HOME/Pictures"
 fi
 
 save_dir="${3:-$XDG_PICTURES_DIR/Screenshots}"
@@ -13,17 +13,17 @@ full_path="/tmp/ss.png"
 case $1 in
 p) grimblast save screen "$full_path" ;;
 f)
-  hyprshot --freeze -m region --clipboard-only -s
-  wl-paste >"$full_path"
-  ;;
+	hyprshot --freeze -m region --clipboard-only -s
+	wl-paste >"$full_path"
+	;;
 m) grimblast save output "$full_path" ;;
 *)
-  exit 1
-  ;;
+	exit 1
+	;;
 esac
 
-ACTION=$(notify-send -u low -a "FixiSS" -i "$full_path" "Screenshot saved" "in $full_path" \
-  -A "view=View" -A "save=Save" -A "copy=Copy" -t 2500)
+ACTION=$(notify-send -e -h string:x-canonical-private-synchronous:volume -i "$full_path" "Screenshot saved" "in $full_path" \
+	-A "view=View" -A "save=Save" -A "copy=Copy" -t 2500)
 
 case "$ACTION" in
 view) xdg-open "$full_path" ;;
