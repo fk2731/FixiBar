@@ -13,6 +13,10 @@ Where Arch meets aesthetics — powered by my cat 💙
     curl -fsSL https://github.com/fk2731/FixiBar/main/setup.sh | bash
 ```
 
+> [!NOTE]
+>
+> Includes an optional step to sign your kernel for Secure Boot.
+
 ## Repository Structure
 
 Here’s a brief overview of the main folders and files:
@@ -92,11 +96,11 @@ https://github.com/user-attachments/assets/8aa0e5f4-fde3-4fd8-ad12-6978b12be9a0
 
   ![Plymouth Catppuccin Mocha](https://github.com/catppuccin/plymouth/blob/main/assets/mocha.webp "Plymouth Catppuccin Mocha")
 
-  > [!NOTE]
-  >
-  > - `lsd` is an enhanced `ls` command
-  > - `tldr` is an enhanced `man` command
-  > - `ogman` is an alias for the original `man` command
+> [!NOTE]
+>
+> - `lsd` is an enhanced `ls` command
+> - `tldr` is an enhanced `man` command
+> - `ogman` is an alias for the original `man` command
 
 ## KeyBinds
 
