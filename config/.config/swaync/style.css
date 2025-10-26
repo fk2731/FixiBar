@@ -232,6 +232,17 @@ blankwindow {
   color: var(--text-color);
   text-shadow: none;
 }
+.notification-row
+  .notification-background
+  .notification
+  .notification-default-action
+  .notification-content
+  slider {
+  /* Notification body */
+  background: transparent;
+  color: var(--text-color);
+  text-shadow: none;
+}
 
 .notification-row
   .notification-background
@@ -482,7 +493,7 @@ blankwindow {
 
 /* Title widget */
 .widget-title > label {
-  font-size: 2rem;
+  font-size: 2.3rem;
 }
 
 .widget-title > button {
@@ -586,19 +597,22 @@ blankwindow {
 }
 
 /* Buttons widget */
+.widget-buttons-grid flowbox {
+  padding: 0 15px 0 15px;
+}
+
 .widget-buttons-grid label {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  /* margin: 9px 0 9px 0; /1* top right bottom left *1/ */
   margin: 0;
   padding: 0;
 }
 
 .widget-buttons-grid flowbox > flowboxchild > button {
   padding: 0;
+  margin: 0;
   box-shadow: var(--mpris-album-art-shadow);
   border-radius: var(--border-radius);
-  /* margin: 0 3px 0 3px; /1* top right bottom left *1/ */
   border: 1px solid rgba(255, 255, 255, 0.12); /* borde suave */
   box-shadow: var(--3d-shadow);
   transition: all 0.26s ease;
@@ -611,67 +625,6 @@ blankwindow {
 
 .widget-buttons-grid flowbox > flowboxchild:hover {
   border-radius: var(--border-radius);
-}
-
-.widget-buttons-grid flowbox > flowboxchild:first-child {
-  margin-bottom: 3px;
-}
-
-.widget-buttons-grid flowboxchild > button.toggle:checked {
-  /* style given to the active toggle button */
-}
-
-/* Menubar widget */
-.widget-menubar {
-  /* The revealer buttons */
-  /* .AnyName { Name defined in config after #
-    background-color: rgba(var(--noti-bg), 1.0);
-    padding: 8px;
-    margin: 8px;
-    border-radius: 12px;
-  }
-
-  .AnyName>button {
-    background: transparent;
-    border: none;
-  }
-
-  .AnyName>button:hover {
-    background-color: var(--noti-bg-focus);
-  } */
-}
-
-.widget-menubar > .menu-button-bar {
-  /* The left button container */
-  /* The right button container */
-  /* The left and right button container */
-}
-
-.widget-menubar > .menu-button-bar > .start {
-  margin-left: 8px;
-}
-
-.widget-menubar > .menu-button-bar > .end {
-  margin-right: 8px;
-}
-
-.widget-menubar > .menu-button-bar > .widget-menubar-container button {
-  border-radius: var(--border-radius);
-  margin: 0 4px;
-}
-
-.widget-menubar > revealer * {
-  margin-top: 8px;
-}
-
-.widget-menubar > revealer * button {
-  border-radius: var(--border-radius);
-  margin: 8px;
-  margin-top: 0;
-}
-
-.widget-menubar > revealer * button:last-child {
-  margin-bottom: 0;
 }
 
 /* Volume widget */
@@ -708,6 +661,10 @@ blankwindow {
   border-radius: var(--border-radius);
 }
 
+.widget-volume, .widget-backlight {
+  font-weight: normal;
+}
+
 .widget-volume slider,
 .widget-backlight slider {
   padding: 2px;
@@ -720,14 +677,13 @@ blankwindow {
 .widget-volume trough,
 .widget-backlight trough {
   min-height: 12px;
-  background-color: --mpris-overlay;
   box-shadow: var(--mpris-album-art-shadow);
 }
 
 .widget-volume highlight,
 .widget-backlight highlight {
   margin: 0;
-  background-color: --noti-bg-focus;
+  background-color: white;
 }
 
 .widget-volume label,
