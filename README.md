@@ -23,7 +23,7 @@ Here’s a brief overview of the main folders and files:
 
 ---
 
-![FixiBar Demo](./utils/FixiBarDemo.gif)
+https://github.com/user-attachments/assets/8aa0e5f4-fde3-4fd8-ad12-6978b12be9a0
 
 ## Features
 
@@ -131,3 +131,4 @@ Here’s a brief overview of the main folders and files:
 | Lock screen    | Super + Shift + L |
 
 ---
+
