@@ -1,3 +1,9 @@
+# FixiBar
+
+[![Arch Linux](https://img.shields.io/badge/Arch%20Linux-1793d1?style=for-the-badge&logo=archlinux&logoColor=white)](https://archlinux.org)
+
+Where Arch meets aesthetics — powered by my cat 💙
+
 ## Installation
 
 > [!IMPORTANT]
@@ -6,8 +12,6 @@
 ```bash
     curl -fsSL https://github.com/fk2731/FixiBar/main/setup.sh | bash
 ```
-
----
 
 ## Repository Structure
 
@@ -20,8 +24,6 @@ Here’s a brief overview of the main folders and files:
 - `pacman.conf` → Pacman package manager configuration
 - `setup.sh` → Installation script for Arch Linux
 - `utils/` → Screenshots
-
----
 
 https://github.com/user-attachments/assets/8aa0e5f4-fde3-4fd8-ad12-6978b12be9a0
 
@@ -90,7 +92,7 @@ https://github.com/user-attachments/assets/8aa0e5f4-fde3-4fd8-ad12-6978b12be9a0
 
   ![Plymouth Catppuccin Mocha](https://github.com/catppuccin/plymouth/blob/main/assets/mocha.webp "Plymouth Catppuccin Mocha")
 
-  > [!INFO]
+  > [!NOTE]
   >
   > - `lsd` is an enhanced `ls` command
   > - `tldr` is an enhanced `man` command
@@ -139,4 +141,29 @@ https://github.com/user-attachments/assets/8aa0e5f4-fde3-4fd8-ad12-6978b12be9a0
 | Launch FixiBar | Super + Shift + B |
 | Lock screen    | Super + Shift + L |
 
----
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!  
+If you want to help improve **FixiBar**, follow these simple steps:
+
+1. Fork this repository.
+2. Create a new branch with your feature or fix:
+   ```bash
+   git checkout -b feature/awesome-idea
+   ```
+3. Commit your changes and push them:
+   ```bash
+   git commit -m "feat: add awesome idea"
+   git push origin feature/awesome-idea
+   ```
+4. Open a Pull Request.
+
+> [!TIP]
+> Make sure to follow the existing code style and structure for consistency.
+
+## ⚖️ License
+
+This project is licensed under the MIT License.
+You are free to use, modify, and distribute it as long as proper credit is given.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
