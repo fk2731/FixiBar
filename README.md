@@ -4,6 +4,8 @@
 
 Where Arch meets aesthetics — powered by my cat 💙
 
+![Fasfetch Thumbnail](./utils/thumbnail.png)
+
 ## Installation
 
 > [!IMPORTANT]
