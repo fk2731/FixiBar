@@ -31,7 +31,7 @@ Here’s a brief overview of the main folders and files:
 - `setup.sh` → Installation script for Arch Linux
 - `utils/` → Screenshots
 
-https://github.com/user-attachments/assets/8aa0e5f4-fde3-4fd8-ad12-6978b12be9a0
+https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 
 ## Features
 
@@ -173,3 +173,4 @@ This project is licensed under the MIT License.
 You are free to use, modify, and distribute it as long as proper credit is given.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
