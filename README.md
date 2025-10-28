@@ -55,10 +55,20 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
   - Workspaces
   - Memory Stats
   - Mpris module - Thanks to: [AxKhz-Shell](https://github.com/mariokhz/AxKhz-Shell)
+
+    ![Left Module](./utils/left_module.png)
+
   - Volume Indicator
   - Bluetooth Indicator
+  - Notifications
   - Network
+
+    ![Right Module](./utils/right_module.png)
+
   - Time, date and calendar
+
+    ![Calendar](./utils/calendar.png)
+
   - Battery indicator (if needed)
 
     ![Battery Indicator Plug](./utils/Charge_indicator.png)
