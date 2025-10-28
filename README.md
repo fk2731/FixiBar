@@ -51,7 +51,7 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 
 - **Bar** (FixiBar):
 
-  ![FixiBar](./utils/Bar.png "FixiBar")
+  ![FixiBar](./utils/FixiBar.png "FixiBar")
   - Workspaces
   - Memory Stats
   - Mpris module - Thanks to: [AxKhz-Shell](https://github.com/mariokhz/AxKhz-Shell)
@@ -91,7 +91,7 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 - **File Manager**: Nemo (not customized)
 - **Display Manager**: SDDM (Fixi Theme)
 
-  ![SDDM Catppuccin-Mocha](./utils/SM.png)
+  ![SDDM Catppuccin-Mocha](./utils/sddm.png)
 
 - **Boot Managaer**: rEFInd (Catppuccin Mocha)
 
