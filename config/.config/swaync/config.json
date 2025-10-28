@@ -83,7 +83,7 @@
           "label": "   \uea37 Bluetooth   ",
           "type": "button",
           "active": true,
-          "command": "swaync-client -t -sw;sh -c 'flatpak run io.github.kaii_lb.Overskride'"
+          "command": "swaync-client -t -sw;sh -c 'adw-bluetooth'"
         },
         {
           "label": "\ueb0d",
