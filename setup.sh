@@ -62,10 +62,10 @@ install_yay() {
 }
 
 install_yay_packages() {
-  yay -Syy -Syy --pgp-import --needed --noconfirm ttf-jetbrains-mono-nerd hyprshot cava telegram-desktop \
+  yay -Syy --pgp-import --needed --noconfirm ttf-jetbrains-mono-nerd hyprshot cava telegram-desktop \
     swaync-git vivaldi rose-pine-cursor rose-pine-hyprcursor spotify grimblast python-psutil nemo \
     python-setproctitle tesseract gpu-screen-recorder python-fabric-git celluloid jdk-lts jdtls fastfetch \
-    hyprshade cliphist inter-font swayosd-git ddcutil kuro-appimage || true
+    hyprshade cliphist inter-font swayosd-git ddcutil kuro-appimage r-quick-share-bin || true
 }
 
 ddcutil_setup() {
