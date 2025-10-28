@@ -66,7 +66,7 @@ install_yay_packages() {
     swaync-git vivaldi rose-pine-cursor rose-pine-hyprcursor spotify grimblast python-psutil nemo \
     python-setproctitle tesseract gpu-screen-recorder python-fabric-git celluloid jdk-lts jdtls fastfetch \
     hyprshade cliphist inter-font swayosd-git ddcutil kuro-appimage r-quick-share-bin noto-fonts-emoji rofi-emoji \
-    wtype adw-bluetooth || true
+    wtype adw-bluetooth swappy || true
 }
 
 ddcutil_setup() {

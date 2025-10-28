@@ -98,7 +98,7 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 
   - Snipping Kit
 
-    ![SnippingKit](./utils/SnapKit.png "Snaping Tools")
+    ![SnippingKit](./utils/SnippKit.png "Snipping Tools")
 
   - Rofi
 
