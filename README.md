@@ -1,4 +1,4 @@
-# FixiBar
+# 😼 FixiBar
 
 [![Arch Linux](https://img.shields.io/badge/Arch%20Linux-1793d1?style=for-the-badge&logo=archlinux&logoColor=white)](https://archlinux.org)
 
@@ -6,7 +6,7 @@ Where Arch meets aesthetics — powered by my cat 💙
 
 ![Fasfetch Thumbnail](./utils/thumbnail.png)
 
-## Installation
+## 🖥️ Installation
 
 > [!IMPORTANT]
 > Just for Arch users, btw...
@@ -19,7 +19,7 @@ Where Arch meets aesthetics — powered by my cat 💙
 >
 > Includes an optional step to sign your kernel for Secure Boot.
 
-## Repository Structure
+## 📕 Repository Structure
 
 Here’s a brief overview of the main folders and files:
 
@@ -33,7 +33,7 @@ Here’s a brief overview of the main folders and files:
 
 https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 
-## Features
+## 🔎 Features
 
 - **NeoVim**:
   - _Theme_: Catppuccin mocha
@@ -46,6 +46,15 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 - **Terminal**: Kitty
 - **Shell**: Zsh with Powerlevel10k
 - **Swaync** (Fixi Theme): Notification Center, BackLight Controller, Volume Controller, Mpris Module, Buttons Grid
+  - _Buttons Grid_:
+    - Bluetooth (adw-bluetooth)
+    - Power Menu (Fixi App)
+    - Clipboard manager (cliphist)
+    - Screen shader (hyprshade)
+    - Internet ( [rofi-wifi](https://github.com/ericmurphyxyz/rofi-wifi-menu) )
+    - Snipping Tools (Fixi App)
+    - App Launcher (rofi)
+    - Calculator (rofi-calc)
 
   ![Swaync Fixi Theme](./utils/swaync.png)
 
@@ -119,7 +128,7 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 > - `tldr` is an enhanced `man` command
 > - `ogman` is an alias for the original `man` command
 
-## KeyBinds
+## ⌨️ KeyBinds
 
 ### Apps
 
@@ -161,6 +170,8 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 | :------------- | :--------------------------------------------- |
 | Launch FixiBar | <kbd>Super</kbd> <kbd>Shift</kbd> <kbd>B</kbd> |
 | Lock screen    | <kbd>Super</kbd> <kbd>Shift</kbd> <kbd>L</kbd> |
+
+---
 
 ## 🤝 Contributing
 
