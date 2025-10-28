@@ -221,8 +221,7 @@ class BatteryWidget(Gtk.Box):
         subprocess.Popen(
             [
                 "notify-send",
-                "-u",
-                "normal",
+                "-e",
                 "-h",
                 "string:x-canonical-private-synchronous:battery-widget",
                 message,
