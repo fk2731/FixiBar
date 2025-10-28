@@ -5,19 +5,15 @@ levelbar block.filled {
 }
 
 levelbar.charging block.filled {
-  background-image: linear-gradient(
-    to right,
-    @battery-charging,
-    @battery-charging
-  );
+  background-image: linear-gradient(to right,
+      @battery-charging,
+      @battery-charging );
 }
 
 levelbar.low block.filled {
-  background-image: linear-gradient(
-    to right,
-    @battery-critical,
-    @battery-critical
-  );
+  background-image: linear-gradient(to right,
+      @battery-critical,
+      @battery-critical );
   margin: 5px 1px;
 }
 
@@ -26,15 +22,20 @@ levelbar.full block.filled {
 }
 
 levelbar trough {
-  background-image: linear-gradient(
-    to right,
-    @bubble-bg-color,
-    @bubble-bg-color
-  );
+  background-image: linear-gradient(to right,
+      @bubble-bg-color,
+      @bubble-bg-color );
   margin: 0;
 }
 
 #battery-widget label {
   font-size: 18px;
   font-weight: bold;
+}
+
+#battery-widget {
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: rgba(78, 78, 78, 0.3);
 }

@@ -62,12 +62,16 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 
 - **Bar** (FixiBar):
 
-  ![FixiBar](./utils/FixiBar.png "FixiBar")
+  ![FixiBar Default](./utils/FixiBar.png "FixiBar Default")
+
+  ![FixiBar Dark Background](./utils/FixiBar_DBG.png "FixiBar Dark Background")
   - Workspaces
   - Memory Stats
   - Mpris module - Thanks to: [AxKhz-Shell](https://github.com/mariokhz/AxKhz-Shell)
 
     ![Left Module](./utils/left_module.png)
+
+    ![Left Module Dark Background](./utils/left_module_DBG.png)
 
   - Volume Indicator
   - Bluetooth Indicator
@@ -75,6 +79,8 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
   - Network
 
     ![Right Module](./utils/right_module.png)
+
+    ![Right Module Dark Background](./utils/right_module_DBG.png)
 
   - Time, date and calendar
 
