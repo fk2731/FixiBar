@@ -121,44 +121,44 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 
 ### Apps
 
-| Action                | KeyBinds  |
-| :-------------------- | :-------- |
-| Close current app     | Super + C |
-| Launch Kitty terminal | Super + Q |
-| Launch Swaync         | Super + N |
-| Launch Rofi           | Super + R |
-| Launch Brave          | Super + B |
-| Launch Spotify        | Super + M |
-| Launch Calculator     | Super + P |
-| Launch Snipping Kit   | Super + Z |
-| Launch Power menu     | Super + W |
-| Open ChatGPT          | Super + F |
-| Open Copilot          | Super + G |
-| Launch Telegram       | Super + T |
+| Action                | KeyBinds                      |
+| :-------------------- | :---------------------------- |
+| Close current app     | <kbd>Super</kbd> <kbd>C</kbd> |
+| Launch Kitty terminal | <kbd>Super</kbd> <kbd>Q</kbd> |
+| Launch Swaync         | <kbd>Super</kbd> <kbd>N</kbd> |
+| Launch Rofi           | <kbd>Super</kbd> <kbd>R</kbd> |
+| Launch Brave          | <kbd>Super</kbd> <kbd>B</kbd> |
+| Launch Spotify        | <kbd>Super</kbd> <kbd>M</kbd> |
+| Launch Calculator     | <kbd>Super</kbd> <kbd>P</kbd> |
+| Launch Snipping Kit   | <kbd>Super</kbd> <kbd>Z</kbd> |
+| Launch Power menu     | <kbd>Super</kbd> <kbd>W</kbd> |
+| Open ChatGPT          | <kbd>Super</kbd> <kbd>F</kbd> |
+| Open Copilot          | <kbd>Super</kbd> <kbd>G</kbd> |
+| Launch Telegram       | <kbd>Super</kbd> <kbd>T</kbd> |
 
 ---
 
 ### Navigation & windows
 
-| Action                           | KeyBinds                       |
-| :------------------------------- | :----------------------------- |
-| Switch window focus in workspace | Alt + Tab                      |
-| Move focus left                  | Super + H                      |
-| Move focus down                  | Super + J                      |
-| Move focus up                    | Super + K                      |
-| Move focus right                 | Super + L                      |
-| Navigate through workspaces      | Super + Tab                    |
-| Move window to another workspace | Super + Shift + &lt;Number&gt; |
-| Switch to workspace              | Super + &lt;Number&gt;         |
+| Action                           | KeyBinds                                                    |
+| :------------------------------- | :---------------------------------------------------------- |
+| Switch window focus in workspace | <kbd>Alt</kbd> + <kbd>Tab</kbd>                             |
+| Move focus left                  | <kbd>Super</kbd> <kbd>H</kbd>                               |
+| Move focus down                  | <kbd>Super</kbd> <kbd>J</kbd>                               |
+| Move focus up                    | <kbd>Super</kbd> <kbd>K</kbd>                               |
+| Move focus right                 | <kbd>Super</kbd> <kbd>L</kbd>                               |
+| Navigate through workspaces      | <kbd>Super</kbd> <kbd>Tab</kbd>                             |
+| Move window to another workspace | <kbd>Super</kbd> <kbd>Shift</kbd> <kbd>&lt;Number&gt;</kbd> |
+| Switch to workspace              | <kbd>Super</kbd> <kbd>&lt;Number&gt;</kbd>                  |
 
 ---
 
 ### System
 
-| Action         | KeyBinds          |
-| :------------- | :---------------- |
-| Launch FixiBar | Super + Shift + B |
-| Lock screen    | Super + Shift + L |
+| Action         | KeyBinds                                       |
+| :------------- | :--------------------------------------------- |
+| Launch FixiBar | <kbd>Super</kbd> <kbd>Shift</kbd> <kbd>B</kbd> |
+| Lock screen    | <kbd>Super</kbd> <kbd>Shift</kbd> <kbd>L</kbd> |
 
 ## 🤝 Contributing
 
