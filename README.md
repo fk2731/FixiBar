@@ -49,6 +49,8 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 
   ![Swaync Fixi Theme](./utils/swaync.png)
 
+- **Swayosd**
+
 - **Bar** (FixiBar):
 
   ![FixiBar](./utils/FixiBar.png "FixiBar")
