@@ -28,5 +28,5 @@ ACTION=$(notify-send -e -h string:x-canonical-private-synchronous:Screenshot -i 
 case "$ACTION" in
 view) xdg-open "$full_path" ;;
 save) cp "$full_path" "$save_dir/$save_file" && notify-send -a "FixiSS" "Screenshot saved" "to $save_dir/$save_file" ;;
-copy) wl-copy <"$full_path" && notify-send -u low -a "FixiSS" "Screenshot copied" "to clipboard" -i $full_path ;;
+copy) wl-copy <"$full_path" && notify-send -e -h string:x-canonical-private-synchronous:screenshot -a "FixiSS" "Screenshot copied" "to clipboard" -i $full_path ;;
 esac
