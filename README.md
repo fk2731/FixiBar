@@ -51,7 +51,7 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 
 - **Bar** (FixiBar):
 
-  ![FixiBar](./utils/FixiBar.png "FixiBar")
+  ![FixiBar](./utils/Bar.png "FixiBar")
   - Workspaces
   - Memory Stats
   - Mpris module - Thanks to: [AxKhz-Shell](https://github.com/mariokhz/AxKhz-Shell)
@@ -90,6 +90,9 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 
 - **File Manager**: Nemo (not customized)
 - **Display Manager**: SDDM (Fixi Theme)
+
+  ![SDDM Catppuccin-Mocha](./utils/SM.png)
+
 - **Boot Managaer**: rEFInd (Catppuccin Mocha)
 
   ![Refind Catppuccin Mocha](https://github.com/catppuccin/refind/blob/main/assets/previews/mocha.webp "Plymouth Catppuccin Mocha")
@@ -173,4 +176,3 @@ This project is licensed under the MIT License.
 You are free to use, modify, and distribute it as long as proper credit is given.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-
