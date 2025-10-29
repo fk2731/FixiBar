@@ -1,5 +1,6 @@
 {
   "barHeight": 35,
   "cssFile": "../styles/main.css",
-  "topMargin": 2
+  "topMargin": 2,
+  "envModeFile": "/tmp/FIXI_ENV_MODE"
 }
