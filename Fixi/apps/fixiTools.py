@@ -10,6 +10,7 @@ DIR = os.path.dirname(os.path.abspath(__file__))
 OCR_SCRIPT = get_relative_path("scripts/ocr.sh")
 SCREENSHOT_SCRIPT = get_relative_path("scripts/screenshot.sh")
 RECORD_SCRIPT = get_relative_path("scripts/screenrecord.sh")
+QR_SCANNER_SCRIPT = get_relative_path("scripts/qr_scanner.sh")
 
 buttons = [
     ("\ufcc3", "OCR", [OCR_SCRIPT]),
@@ -17,6 +18,7 @@ buttons = [
     ("\ued37", "Print all screens", [SCREENSHOT_SCRIPT, "p"]),
     ("\ueaea", "Snip area", [SCREENSHOT_SCRIPT, "f"]),
     ("\uf698 \ued22", "Record screen", [RECORD_SCRIPT]),
+    ("\ueb11", "QR Code Scanner", [QR_SCANNER_SCRIPT]),
 ]
 
 if __name__ == "__main__":
