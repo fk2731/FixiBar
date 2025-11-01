@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 image=$HOME/.dotfiles/Fixi/apps/scripts/icons/ocr.svg
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 if [ -z "$XDG_PICTURES_DIR" ]; then
   XDG_PICTURES_DIR="$HOME/Pictures"
