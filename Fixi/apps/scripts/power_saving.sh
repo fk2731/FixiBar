@@ -2,9 +2,8 @@
 
 CONFIG_FILE="$HOME/.dotfiles/Fixi/config.json"
 STATE_FILE=$(jq -r '.envModeFile' "$CONFIG_FILE")
-FALLBACK_MODE="normal"  # sin $
+FALLBACK_MODE="normal"
 
-# Leer el modo actual del JSON (si existe)
 if [[ -f "$STATE_FILE" ]]; then
   CURRENT_MODE=$(jq -r --arg fallback "$FALLBACK_MODE" '.mode // $fallback' "$STATE_FILE")
 else
@@ -21,4 +20,3 @@ else
   killall FixiBar
   python3 "$HOME/.dotfiles/Fixi/bar/bar.py" power_save &
 fi
-

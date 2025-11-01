@@ -172,10 +172,11 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 
 ### System
 
-| Action         | KeyBinds                                       |
-| :------------- | :--------------------------------------------- |
-| Launch FixiBar | <kbd>Super</kbd> <kbd>Shift</kbd> <kbd>B</kbd> |
-| Lock screen    | <kbd>Super</kbd> <kbd>Shift</kbd> <kbd>L</kbd> |
+| Action                   | KeyBinds                                       |
+| :----------------------- | :--------------------------------------------- |
+| Launch FixiBar           | <kbd>Super</kbd> <kbd>Shift</kbd> <kbd>B</kbd> |
+| Lock screen              | <kbd>Super</kbd> <kbd>Shift</kbd> <kbd>L</kbd> |
+| Active Power Saving Mode | <kbd>Super</kbd> <kbd>Shift</kbd> <kbd>N</kbd> |
 
 ---
 

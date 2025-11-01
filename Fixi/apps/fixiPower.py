@@ -1,8 +1,12 @@
 import os
+
 import setproctitle
 from dock import main
+from fabric.utils import get_relative_path
 
 DIR = os.path.dirname(os.path.abspath(__file__))
+
+POWER_SAVING_SCRIPT = get_relative_path("scripts/power_saving.sh")
 
 buttons = [
     (
@@ -30,6 +34,11 @@ buttons = [
         "\ueae2",
         "Lock Screen\n<small> Locks the current session.</small>",
         ["loginctl", "lock-session"],
+    ),
+    (
+        "\ufb9e",
+        "Power Saving Mode\n<small> Reduces power consumption.</small>",
+        [POWER_SAVING_SCRIPT],
     ),
 ]
 
