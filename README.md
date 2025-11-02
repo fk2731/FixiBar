@@ -111,7 +111,7 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
     ![RofiLauncher](./utils/RofiApps.png "Rofi Launcher Application")
 
 - **Hyprpaper**
-- **Hyprlock** (Fixi Theme)
+- **Hyprlock** (Fixi's version from [MrVivekRajan](https://github.com/MrVivekRajan/Hyprlock-Styles))
 
   ![Hyprlock Fixi Theme](./utils/hyprlock.png)
 
