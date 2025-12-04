@@ -1,9 +1,9 @@
 {
   "logo": {
-    "source": "~/.config/fastfetch/fixiFF.png",
+    "source": "~/.config/fastfetch/FixiArch.png", // Thanks to @nayla.fresita on Instagram for the logo design
     "type": "kitty",
     "height": 16,
-    "width": 34,
+    "width": 33,
     "padding": {
       "top": 6,
       "left": 1,
