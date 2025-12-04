@@ -4,7 +4,7 @@
 
 Where Arch meets aesthetics — powered by my cat 💙
 
-![Fasfetch Thumbnail](./utils/thumbnail.png)
+![Fasfetch Thumbnail](./utils/FastFetch.png)
 
 ## 🖥️ Installation
 
@@ -35,11 +35,11 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 
 ## 🔎 Features
 
-- **NeoVim**:
-  - _Theme_: Catppuccin mocha
-  - _Lsp, formaters and linters_: Java, Bash, Python, JavaScript, HTML, CSS, Lua, Markdown
+- **NeoVim** (Fixi's version from [NvChad](https://nvchad.com) ):
+  - _Theme_: Catppuccin mocha (Forced it)
+  - _Lsp, formaters and linters for_: Java, Bash, Python, JavaScript, HTML, CSS, Lua, Markdown, C, tailwindCSS, Astro
   - _Navigation_: Telescope, oil, neo-tree
-  - _Buffer_: MultiCursor, AutoComment, LuaLine, Surround, GitSigns
+  - _Buffer_: AutoComment, Surround, Image Render, Color Picker
 
     ![Nvim example](./utils/Nvim.png "Nvim")
 
