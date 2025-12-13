@@ -72,3 +72,6 @@ update-system() {
   echo "Clearing dependencies..."
   clear-dependencies
 }
+
+# Created by `pipx` on 2025-12-01 22:03:11
+export PATH="$PATH:/home/tux/.local/bin"
