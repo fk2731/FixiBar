@@ -26,7 +26,7 @@ ACTION=$(notify-send -e \
 
 case "$ACTION" in
 view)
-  xdg-open "$full_path"
+  swappy -f "$full_path"
   ;;
 edit)
   swappy -f "$full_path"
@@ -41,12 +41,12 @@ save)
     -i "$final_path" \
     -a "FixiSS" \
     "Screenshot saved successfully" "to $final_path" \
-    -A "open=View image" \
+    -A "view=View image" \
     -A "folder=Open folder")
 
   case "$ACTION2" in
-  open)
-    xdg-open "$final_path"
+  view)
+    swappy -f "$final_path"
     ;;
   folder)
     xdg-open "$save_dir"
