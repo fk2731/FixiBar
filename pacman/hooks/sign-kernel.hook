@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = linux
+
+[Action]
+Description = Signing kernel for Secure Boot (rEFInd)
+When = PostTransaction
+Depends = sbsigntools
+Exec = /usr/local/lib/pacman-hooks/sign-kernel.sh
