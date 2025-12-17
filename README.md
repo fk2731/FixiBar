@@ -4,7 +4,7 @@
 
 Where Arch meets aesthetics — powered by my cat 💙
 
-![Fasfetch Thumbnail](./utils/FastFetch.png)
+![Fasfetch Thumbnail](./utils/FastFetch.webp)
 
 ## 🖥️ Installation
 
@@ -41,7 +41,7 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
   - _Navigation_: Telescope, oil, neo-tree
   - _Buffer_: AutoComment, Surround, Image Render, Color Picker
 
-    ![Nvim example](./utils/Nvim.png "Nvim")
+    ![Nvim example](./utils/Nvim.webp "Nvim")
 
 - **Terminal**: Kitty
 - **Shell**: Zsh with Powerlevel10k
@@ -56,47 +56,47 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
     - App Launcher (rofi)
     - Calculator (rofi-calc)
 
-  ![Swaync Fixi Theme](./utils/swaync.png)
+  ![Swaync Fixi Theme](./utils/Swaync.png)
 
 - **Swayosd**
 
 - **Bar** (FixiBar):
 
-  ![FixiBar Default](./utils/FixiBar.png "FixiBar Default")
+  ![FixiBar Default](./utils/FixiBar.webp "FixiBar Default")
 
-  ![FixiBar Dark Background](./utils/FixiBar_DBG.png "FixiBar Dark Background")
+  ![FixiBar Dark Background](./utils/FixiBar_DBG.webp "FixiBar Dark Background")
   - Workspaces
   - Memory Stats
   - Mpris module - Thanks to: [AxKhz-Shell](https://github.com/mariokhz/AxKhz-Shell)
 
-    ![Left Module](./utils/left_module.png)
+    ![Left Module](./utils/Left_module.webp)
 
-    ![Left Module Dark Background](./utils/left_module_DBG.png)
+    ![Left Module Dark Background](./utils/Left_module_DBG.webp)
 
   - Volume Indicator
   - Bluetooth Indicator
   - Notifications
   - Network
 
-    ![Right Module](./utils/right_module.png)
+    ![Right Module](./utils/Right_module.png)
 
-    ![Right Module Dark Background](./utils/right_module_DBG.png)
+    ![Right Module Dark Background](./utils/Right_module_DBG.png)
 
   - Time, date and calendar
 
-    ![Calendar](./utils/calendar.png)
+    ![Calendar](./utils/Calendar.webp)
 
   - Battery indicator (if needed)
 
-    ![Battery Indicator Plug](./utils/Charge_indicator.png)
-    ![Battery Indicator Plug Off](./utils/plug_off_indicator.png)
-    ![Battery Low Indicator](./utils/battery_low_indicator.png)
-    ![Battery Care Indicator](./utils/care_indicator.png)
+    ![Battery Indicator Plug](./utils/Charge_indicator.webp)
+    ![Battery Indicator Plug Off](./utils/Plug_off_indicator.png)
+    ![Battery Low Indicator](./utils/Battery_low_indicator.webp)
+    ![Battery Care Indicator](./utils/Care_indicator.webp)
 
 - **Widgets** (Fixi Custom):
   - Calculator
 
-    ![RofiCalculator](./utils/Calculator.png "Rofi Calculator")
+    ![RofiCalculator](./utils/Calculator.webp "Rofi Calculator")
 
   - Power menu
 
@@ -113,12 +113,12 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 - **Hyprpaper**
 - **Hyprlock** (Fixi's version from [MrVivekRajan](https://github.com/MrVivekRajan/Hyprlock-Styles))
 
-  ![Hyprlock Fixi Theme](./utils/hyprlock.png)
+  ![Hyprlock Fixi Theme](./utils/Hyprlock.webp)
 
 - **File Manager**: Nemo (not customized)
 - **Display Manager**: SDDM (Fixi Theme)
 
-  ![SDDM Catppuccin-Mocha](./utils/sddm.png)
+  ![SDDM Catppuccin-Mocha](./utils/Sddm.png)
 
 - **Boot Managaer**: rEFInd (Catppuccin Mocha)
 
