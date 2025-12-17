@@ -32,7 +32,7 @@ setup_refind() {
   log_info " Setup rEFInd..."
 
   sudo install -d /boot/EFI/refind/themes/
-  sudo install -m644 ./boot/os_arch.png /boot/vmlinuz-linux.png
+  sudo install -m644 "$REPO_DIR/boot/os_arch.png" /boot/vmlinuz-linux.png
 
   sudo install -d /boot/EFI/refind/themes/
 
