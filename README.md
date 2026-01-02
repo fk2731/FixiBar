@@ -12,7 +12,7 @@ Where Arch meets aesthetics — powered by my cat 💙
 > Just for Arch users, btw...
 
 ```bash
-    curl -fsSL https://github.com/fk2731/FixiBar/main/setup.sh | bash
+    curl -fsSL https://github.com/fk2731/FixiBar/main/install.sh | bash
 ```
 
 > [!NOTE]
@@ -56,7 +56,7 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
     - App Launcher (rofi)
     - Calculator (rofi-calc)
 
-  ![Swaync Fixi Theme](./utils/Swaync.png)
+  ![Swaync Fixi Theme](./utils/Swaync.webp)
 
 - **Swayosd**
 
@@ -78,9 +78,9 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
   - Notifications
   - Network
 
-    ![Right Module](./utils/Right_module.png)
+    ![Right Module](./utils/Right_module.webp)
 
-    ![Right Module Dark Background](./utils/Right_module_DBG.png)
+    ![Right Module Dark Background](./utils/Right_module_DBG.webp)
 
   - Time, date and calendar
 
@@ -89,7 +89,7 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
   - Battery indicator (if needed)
 
     ![Battery Indicator Plug](./utils/Charge_indicator.webp)
-    ![Battery Indicator Plug Off](./utils/Plug_off_indicator.png)
+    ![Battery Indicator Plug Off](./utils/Plug_off_indicator.webp)
     ![Battery Low Indicator](./utils/Battery_low_indicator.webp)
     ![Battery Care Indicator](./utils/Care_indicator.webp)
 
@@ -100,15 +100,15 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 
   - Power menu
 
-    ![PowerMenu](./utils/PowerMenu.png "Power Menu")
+    ![PowerMenu](./utils/PowerMenu.webp "Power Menu")
 
   - Snipping Kit
 
-    ![SnippingKit](./utils/SnippKit.png "Snipping Tools")
+    ![SnippingKit](./utils/SnippKit.webp "Snipping Tools")
 
   - Rofi
 
-    ![RofiLauncher](./utils/RofiApps.png "Rofi Launcher Application")
+    ![RofiLauncher](./utils/RofiApps.webp "Rofi Launcher Application")
 
 - **Hyprpaper**
 - **Hyprlock** (Fixi's version from [MrVivekRajan](https://github.com/MrVivekRajan/Hyprlock-Styles))
@@ -118,7 +118,7 @@ https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
 - **File Manager**: Nemo (not customized)
 - **Display Manager**: SDDM (Fixi Theme)
 
-  ![SDDM Catppuccin-Mocha](./utils/Sddm.png)
+  ![SDDM Catppuccin-Mocha](./utils/Sddm.webp)
 
 - **Boot Managaer**: rEFInd (Catppuccin Mocha)
 
