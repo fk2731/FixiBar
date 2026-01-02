@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PACMAN_PKGS=(
+AUR_PKGS=(
   efibootmgr
   dosfstools
   mtools
@@ -24,6 +24,7 @@ PACMAN_PKGS=(
   bluez
   bluez-utils
   refind
+  rofi-calc
   rofi
   wget
   unzip
@@ -33,20 +34,17 @@ PACMAN_PKGS=(
   qt5-quickcontrols2
   qt6-wayland
   xdg-desktop-portal
-  xdg-desktop-portal-hyprland
+  xdg-desktop-portal-hyprland-git
   tldr
   system-config-printer
   sed
-)
-
-AUR_PKGS=(
   ttf-jetbrains-mono-nerd
   hyprshot
   cava
   swaync-git
   spotify
   vivaldi
-  grimblast
+  grimblast-git
   rose-pine-cursor
   rose-pine-hyprcursor
   nemo
@@ -66,8 +64,10 @@ AUR_PKGS=(
   kuro-appimage
   r-quick-share-bin
   tesseract
+  tesseract-data-spa
   ttf-apple-emoji
   rofi-emoji
+  rofi-calc
   wtype
   adw-bluetooth
   swappy
@@ -92,11 +92,7 @@ install_aur_helper() {
 }
 
 install_packages() {
-  log_info "Installing official packages (Pacman)..."
-  sudo pacman -S --needed --noconfirm "${PACMAN_PKGS[@]}"
-
   log_info "Installing AUR packages (Yay)..."
-
   yay -S --needed --noconfirm "${AUR_PKGS[@]}" || log_warn "Some AUR packages failed, continuing."
   log_ok "Package installation completed."
 }
