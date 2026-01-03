@@ -60,7 +60,7 @@ AUR_PKGS=(
   fastfetch
   hyprshade
   cliphist
-  swayosd-git
+  swayosd
   inter-font
   ddcutil
   kuro-appimage
