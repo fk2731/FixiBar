@@ -12,7 +12,6 @@ IFS=$'\n\t'
 # --------------------------------------------------
 # Global Paths & Variables
 # --------------------------------------------------
-REPO_URL="https://github.com/fk2731/FixiBar.git"
 REPO_DIR="$HOME/.dotfiles"
 
 # --------------------------------------------------
@@ -47,15 +46,11 @@ EOF
 }
 
 update_system() {
-  log_info "Updating system and synchronizing repository..."
-  sudo pacman -Syyu --noconfirm git base-devel
+  log_info "Synchronizing repository..."
 
   if [ ! -d "$REPO_DIR" ]; then
     log_info "Updating config..."
     git -C "$REPO_DIR" pull
-  else
-    log_info "Cloning config..."
-    git clone --depth=1 "$REPO_URL" "$REPO_DIR"
   fi
 
   if [[ "$(pwd)" != "$REPO_DIR" ]]; then
@@ -89,9 +84,9 @@ full_install() {
   configure_boot
 
   log_ok "Installation completed successfully!"
+  print-missing-packages
   log_warn "A system reboot is highly recommended for all changes to take effect."
   final_secure_boot_message
-  print-missing-packages
 }
 
 # --------------------------------------------------

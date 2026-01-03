@@ -100,21 +100,12 @@ install_packages() {
   log_info "Installing AUR packages (Yay)..."
 
   for pkg in "${AUR_PKGS[@]}"; do
-    yay -S --needed --noconfirm "$pkg" || FAILED_AUR_PKGS+=("$pkg")
+    yay -S --needed --noconfirm "$pkg" || {
+      log_warn Fail to install "$pkg"
+      FAILED_AUR_PKGS+=("$pkg")
+    }
 
   log_ok "Package installation completed."
-}
-
-setup_rust() {
-  if ! command -v cargo &>/dev/null; then
-    log_info "Installing Rust toolchain..."
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-    source "$HOME/.cargo/env"
-    cargo install tree-sitter-cli # Nvim stuff
-    log_ok "Rust installed."
-  else
-    log_ok "Rust already installed."
-  fi
 }
 
 print-missing-packages() {

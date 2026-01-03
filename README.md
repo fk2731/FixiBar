@@ -12,7 +12,7 @@ Where Arch meets aesthetics — powered by my cat 💙
 > Just for Arch users, btw...
 
 ```bash
-    curl -fsSL https://github.com/fk2731/FixiBar/main/install.sh | bash
+    curl -fsSL https://raw.githubusercontent.com/fk2731/FixiBar/main/setup.sh | bash
 ```
 
 > [!NOTE]
