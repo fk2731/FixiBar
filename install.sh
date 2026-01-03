@@ -91,6 +91,7 @@ full_install() {
   log_ok "Installation completed successfully!"
   log_warn "A system reboot is highly recommended for all changes to take effect."
   final_secure_boot_message
+  print-missing-packages
 }
 
 # --------------------------------------------------

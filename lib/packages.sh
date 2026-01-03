@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+FAILED_AUR_PKGS=()
+
 AUR_PKGS=(
   efibootmgr
   dosfstools
@@ -7,6 +9,7 @@ AUR_PKGS=(
   brightnessctl
   zsh
   lsd
+  less
   kitty
   neovim
   hyprland
@@ -19,6 +22,7 @@ AUR_PKGS=(
   ripgrep
   stow
   sddm
+  playerctl
   plymouth
   cups
   bluez
@@ -35,10 +39,8 @@ AUR_PKGS=(
   qt6-wayland
   xdg-desktop-portal
   xdg-desktop-portal-hyprland-git
-  tldr
   system-config-printer
   sed
-  ttf-jetbrains-mono-nerd
   hyprshot
   cava
   swaync-git
@@ -66,6 +68,9 @@ AUR_PKGS=(
   tesseract
   tesseract-data-spa
   ttf-apple-emoji
+  tldr
+  ttf-jetbrains-mono-nerd
+  tree-sitter-cli
   rofi-emoji
   rofi-calc
   wtype
@@ -93,7 +98,10 @@ install_aur_helper() {
 
 install_packages() {
   log_info "Installing AUR packages (Yay)..."
-  yay -S --needed --noconfirm "${AUR_PKGS[@]}" || log_warn "Some AUR packages failed, continuing."
+
+  for pkg in "${AUR_PKGS[@]}"; do
+    yay -S --needed --noconfirm "$pkg" || FAILED_AUR_PKGS+=("$pkg")
+
   log_ok "Package installation completed."
 }
 
@@ -107,4 +115,12 @@ setup_rust() {
   else
     log_ok "Rust already installed."
   fi
+}
+
+print-missing-packages() {
+  (( ${#FAILED_AUR_PKGS[@]} )) && {
+    log_warn "Fail installation packages:"
+    printf ' - %s\n' "${FAILED_AUR_PKGS[@]}"
+    log_warn "Need manual intervention"
+  }
 }
