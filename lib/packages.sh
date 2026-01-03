@@ -104,6 +104,7 @@ install_packages() {
       log_warn Fail to install "$pkg"
       FAILED_AUR_PKGS+=("$pkg")
     }
+  done 
 
   log_ok "Package installation completed."
 }
