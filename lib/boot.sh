@@ -59,7 +59,7 @@ enable_secure_boot() {
   local key="/etc/refind.d/keys/refind_local.key"
   local cert="/etc/refind.d/keys/refind_local.crt"
 
-  if [ -f "$key" ] && [ -f "$cert" ]; then
+  if sudo test -f "$key" && sudo test -f "$cert"; then
     log_info "Firmando el kernel vmlinuz-linux..."
 
     sudo sbsign \
