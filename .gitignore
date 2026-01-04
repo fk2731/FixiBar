@@ -2,3 +2,10 @@ config/.config/nvim/lazy-lock.json
 config/.config/nvim/.luarc.json
 config/.local/share/jdtls/configuration/*
 *.uuid
+config/.local/lib/
+config/.local/share/.vivaldi_reporting_data
+config/.local/share/gvfs-metadata/
+config/.local/share/hyprland/
+config/.local/share/nvim/
+config/.local/share/sddm/
+config/.local/state/
