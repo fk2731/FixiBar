@@ -39,8 +39,12 @@ setup_refind() {
   sudo cp -r "$REPO_DIR/boot/catppuccin/" /boot/EFI/refind/themes/
   local refind_conf="/boot/EFI/refind/refind.conf"
   local include_line="include themes/catppuccin/mocha.conf"
+  local options_line="options quiet splash loglevel=0"
   if [ -f "$refind_conf" ] && ! grep -Fxq "$include_line" "$refind_conf"; then
     echo "$include_line" | sudo tee -a "$refind_conf" >/dev/null
+  fi
+  if [ -f "$refind_conf" ] && ! grep -Fxq "$options_line" "$refind_conf"; then
+    echo "$options_line" | sudo tee -a "$refind_conf" >/dev/null
   fi
 
 }
@@ -82,7 +86,7 @@ final_secure_boot_message() {
 }
 
 plymouth_setup() {
-  log_info "Plymouth..."
+  log_info "Configuring Plymouth..."
 
   sudo install -d /usr/share/plymouth/themes
   sudo cp -r "$REPO_DIR/boot/plymouth/catppuccin-mocha" /usr/share/plymouth/themes/
@@ -91,8 +95,7 @@ plymouth_setup() {
   grep -q "plymouth" /etc/mkinitcpio.conf ||
     sudo sed -i 's/^\(HOOKS=.*\)udev/\1udev plymouth/' /etc/mkinitcpio.conf
 
-  grep -q "quiet splash" /etc/mkinitcpio.conf ||
-    sudo sed -i 's/\bquiet\b/quiet splash/' /etc/mkinitcpio.conf
+  sudo sed -i '/quiet splash/! s/rootfstype=ext4/& quiet splash loglevel=3 vt.global_cursor_default=0/' /boot/refind_linux.conf
 
   sudo mkinitcpio -P
 }
