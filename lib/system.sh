@@ -17,6 +17,10 @@ configure_system() {
   sudo modprobe i2c-dev || true
   sudo usermod -aG i2c "$USER" || log_warn "Failed to add user to groups."
 
+  # SDDM config
+  log_info "Configuring sddm..."
+  setup_sddm
+
   # Enable services
   sudo systemctl enable sddm.service --force
   sudo systemctl enable bluetooth.service
@@ -24,4 +28,10 @@ configure_system() {
   sudo systemctl enable cups.service
 
   log_ok "System configuration applied."
+}
+
+setup_sddm() {
+  sudo cp -r ./login/catppuccin-mocha/ /usr/share/sddm/themes/
+  sudo cp ./login/sddm.conf /etc/sddm.conf
+  sudo install -m644 ./login/index.theme /usr/share/icons/default/index.theme
 }
