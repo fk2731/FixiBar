@@ -27,6 +27,8 @@ AUR_PKGS=(
   cups
   bluez
   bluez-utils
+  brother-dcpt310
+  brscan4
   refind
   rofi-calc
   rofi
@@ -67,6 +69,9 @@ AUR_PKGS=(
   r-quick-share-bin
   tesseract
   tesseract-data-spa
+  noto-fonts
+  noto-fonts-cjk
+  noto-fonts-extra
   ttf-apple-emoji
   tldr
   ttf-jetbrains-mono-nerd
@@ -105,6 +110,8 @@ install_packages() {
       FAILED_AUR_PKGS+=("$pkg")
     }
   done 
+
+  fc-cache -fv
 
   log_ok "Package installation completed."
 }
