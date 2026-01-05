@@ -2,7 +2,7 @@ return {
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
-    enabled = false, -- disable conform since we're using mason-null-ls
+    enable = false,
   },
 
   -- These are some examples, uncomment them if you want to see them work!
@@ -68,10 +68,9 @@ return {
   -- { import = "nvchad.blink.lazyspec" },
 
   {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    opts = {
-      ensure_installed = {
+  	"nvim-treesitter/nvim-treesitter",
+  	opts = {
+  		ensure_installed = {
         "bash",
         "c",
         "diff",
@@ -100,11 +99,9 @@ return {
         "latex",
         "astro",
         "css",
-      },
-      highlight = {
-        enable = true,
-      },
+  		},
+      highlight = { enable = true },
       indent = { enable = true },
-    },
+  	},
   },
 }

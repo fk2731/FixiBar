@@ -7,7 +7,8 @@ install_neovim_config() {
   log_info "Installing Neovim configuration..."
 
   local nvim="$HOME/.config/nvim"
-  local nvim_repo_path="$REPO_DIR/config/.config/nvim"
+  local nvim_repo_path="$REPO_DIR/config/.config/nvim/lua"
+  local nvim_config="$nvim/lua"
 
   # Backup
   if [[ -d "$nvim" ]]; then
@@ -16,11 +17,20 @@ install_neovim_config() {
   fi
 
   # Install
-  if [[ -d "$nvim_repo_path" ]]; then
-    mkdir -p "$nvim"
-    cp -r "$nvim_repo_path/"* "$nvim/"
-    log_ok "Neovim configuration copied."
-  else
-    log_err "Neovim config source not found at $nvim_repo_path."
-  fi
+  log_info "Installing NvChad repository..."
+
+  git clone https://github.com/NvChad/starter "$nvim"
+
+  log_info "Using Fixi configuration..."
+
+  cat "$nvim_repo_path/chadrc.lua" > "$nvim_config/chadrc.lua"
+  cat "$nvim_repo_path/autocmds.lua" >> "$nvim_config/autocmds.lua"
+  cat "$nvim_repo_path/mappings.lua" >> "$nvim_config/mappings.lua"
+  cat "$nvim_repo_path/options.lua" >> "$nvim_config/options.lua"
+  cat "$nvim_repo_path/plugins/init.lua" > "$nvim_config/plugins/init.lua"
+  for i in "$nvim_repo_path"/plugins/*; do
+    cp "$i" "$nvim_config/plugins/"
+  done
+
+  log_ok "Neovim configuration copied."
 }

@@ -1,9 +1,7 @@
-require "nvchad.options"
 
--- add yours here!
+-- ### FIXI OPTIONS ###
 
--- local o = vim.o
--- o.cursorlineopt ='both' -- to enable cursorline!
+vim.o.cursorlineopt ='both' -- to enable cursorline!
 vim.o.undofile = true
 
 vim.opt.relativenumber = true
