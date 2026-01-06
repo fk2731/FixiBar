@@ -7,7 +7,7 @@ install_neovim_config() {
   log_info "Installing Neovim configuration..."
 
   local nvim="$HOME/.config/nvim"
-  local nvim_repo_path="$REPO_DIR/config/.config/nvim/lua"
+  local nvim_repo_path="$REPO_DIR/nvim/lua"
   local nvim_config="$nvim/lua"
 
   # Backup
