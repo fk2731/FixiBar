@@ -40,7 +40,7 @@ AUR_PKGS=(
   qt5-quickcontrols2
   qt6-wayland
   xdg-desktop-portal
-  xdg-desktop-portal-hyprland-git
+  xdg-desktop-portal-hyprland
   system-config-printer
   sed
   hyprshot
