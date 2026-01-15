@@ -31,8 +31,6 @@ Here’s a brief overview of the main folders and files:
 - `setup.sh` → Installation script for Arch Linux
 - `utils/` → Screenshots
 
-https://github.com/user-attachments/assets/45145783-ef79-4aff-a0eb-eebefbb211b2
-
 ## 🔎 Features
 
 - **NeoVim** (Fixi's version from [NvChad](https://nvchad.com) ):
