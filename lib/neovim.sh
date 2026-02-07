@@ -32,5 +32,7 @@ install_neovim_config() {
     cp "$i" "$nvim_config/plugins/"
   done
 
+  sed -i 's/servers *= *{.*}/servers = {\n  "html",\n  "cssls",\n  "ts_ls",\n  "astro",\n  "pyright",\n  "bashls",\n  "marksman",\n  "grammarly-languageserver",\n  "clangd",\n  "biome",\n  "tailwindcss",\n}/' "$nvim/configs/lspconfig.lua"
+
   log_ok "Neovim configuration copied."
 }
