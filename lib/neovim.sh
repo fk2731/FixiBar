@@ -4,35 +4,52 @@
 # Neovim Configuration
 # --------------------------------------------------
 install_neovim_config() {
-  log_info "Installing Neovim configuration..."
+	log_info "Installing Neovim configuration..."
 
-  local nvim="$HOME/.config/nvim"
-  local nvim_repo_path="$REPO_DIR/nvim/lua"
-  local nvim_config="$nvim/lua"
+	local nvim="$HOME/.config/nvim"
+	local nvim_repo_path="$REPO_DIR/nvim/lua"
+	local nvim_config="$nvim/lua"
 
-  # Backup
-  if [[ -d "$nvim" ]]; then
-    mv "$nvim" "$nvim.bak.$(date +%s)"
-    log_info "Backed up existing Neovim config."
-  fi
+	# Backup
+	if [[ -d "$nvim" ]]; then
+		mv "$nvim" "$nvim.bak.$(date +%s)"
+		log_info "Backed up existing Neovim config."
+	fi
 
-  # Install
-  log_info "Installing NvChad repository..."
+	# Install
+	log_info "Installing NvChad repository..."
 
-  git clone https://github.com/NvChad/starter "$nvim"
+	git clone https://github.com/NvChad/starter "$nvim"
 
-  log_info "Using Fixi configuration..."
+	log_info "Using Fixi configuration..."
 
-  cat "$nvim_repo_path/chadrc.lua" > "$nvim_config/chadrc.lua"
-  cat "$nvim_repo_path/autocmds.lua" >> "$nvim_config/autocmds.lua"
-  cat "$nvim_repo_path/mappings.lua" >> "$nvim_config/mappings.lua"
-  cat "$nvim_repo_path/options.lua" >> "$nvim_config/options.lua"
-  cat "$nvim_repo_path/plugins/init.lua" > "$nvim_config/plugins/init.lua"
-  for i in "$nvim_repo_path"/plugins/*; do
-    cp "$i" "$nvim_config/plugins/"
-  done
+	cat "$nvim_repo_path/chadrc.lua" >"$nvim_config/chadrc.lua"
 
-  sed -i 's/servers *= *{.*}/servers = {\n  "html",\n  "cssls",\n  "ts_ls",\n  "astro",\n  "pyright",\n  "bashls",\n  "marksman",\n  "grammarly-languageserver",\n  "clangd",\n  "biome",\n  "tailwindcss",\n}/' "$nvim/configs/lspconfig.lua"
+  cat >"$nvim_config/configs/lspconfig.lua" <<'EOF'
+require("nvchad.configs.lspconfig").defaults()
 
-  log_ok "Neovim configuration copied."
+local servers = {
+  "html",
+  "cssls",
+  "ts_ls",
+  "astro",
+  "pyright",
+  "bashls",
+  "marksman",
+  "clangd",
+  "biome",
+  "tailwindcss",
+}
+vim.lsp.enable(servers)
+EOF
+
+	cat "$nvim_repo_path/autocmds.lua" >>"$nvim_config/autocmds.lua"
+	cat "$nvim_repo_path/mappings.lua" >>"$nvim_config/mappings.lua"
+	cat "$nvim_repo_path/options.lua" >>"$nvim_config/options.lua"
+
+	for i in "$nvim_repo_path"/plugins/*; do
+		cp "$i" "$nvim_config/plugins/"
+	done
+
+	log_ok "Neovim configuration copied."
 }

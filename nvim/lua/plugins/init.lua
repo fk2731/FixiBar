@@ -1,11 +1,11 @@
 return {
+  -- Formatter
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
-    enable = false,
+    enabled = false,
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
+  -- LSP
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -21,56 +21,17 @@ return {
         },
         severity_sort = true,
       }
-
       require "configs.lspconfig"
     end,
   },
+
+  -- Treesitter
   {
-    "hrsh7th/nvim-cmp",
-    opts = function(_, opts)
-      opts.experimental = opts.experimental or {}
-      opts.experimental.ghost_text = { hl_group = "CmpGhostText" }
-
-      local cmp = require "cmp"
-      opts.mapping = vim.tbl_extend("force", opts.mapping or {}, {
-        ["<Tab>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_next_item()
-          else
-            fallback()
-          end
-        end, { "i" }),
-
-        ["<S-Tab>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_prev_item()
-          else
-            fallback()
-          end
-        end, { "i" }),
-
-        ["<D-Space>"] = cmp.mapping(function()
-          if cmp.visible() then
-            cmp.close()
-          else
-            cmp.complete()
-          end
-        end, { "i" }),
-
-        ["<CR>"] = cmp.mapping.confirm { select = true },
-        ["<C-e>"] = cmp.mapping.abort(),
-      })
-      return opts
-    end,
-  },
-
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
-
-  {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
+    "nvim-treesitter/nvim-treesitter",
+    lazy = false,
+    build = ":TSUpdate",
+    opts = {
+      ensure_installed = {
         "bash",
         "c",
         "diff",
@@ -99,9 +60,9 @@ return {
         "latex",
         "astro",
         "css",
-  		},
+      },
       highlight = { enable = true },
       indent = { enable = true },
-  	},
+    },
   },
 }
