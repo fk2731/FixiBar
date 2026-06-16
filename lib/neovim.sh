@@ -16,6 +16,9 @@ install_neovim_config() {
 		log_info "Backed up existing Neovim config."
 	fi
 
+  log_info "Installing lombok..."
+  yay -S java-lombok
+
 	# Install
 	log_info "Installing NvChad repository..."
 
