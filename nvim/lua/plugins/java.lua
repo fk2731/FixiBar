@@ -7,15 +7,10 @@ return {
 		local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 		local workspace = home .. "/.local/share/eclipse/" .. project_name
 
-		local os_config = "linux"
-		if vim.fn.has("mac") == 1 then
-			os_config = "mac"
-		end
-
 		local config = {
 			cmd = { "jdtls", "-data", workspace },
 
-			root_dir = require("lspconfig.util").root_pattern(".git", "gradlew", "mvnw", "pom.xml"),
+			root_dir = vim.fs.root(0, { ".git", "gradlew", "mvnw", "pom.xml" }),
 
 			capabilities = require("cmp_nvim_lsp").default_capabilities(),
 
@@ -37,10 +32,7 @@ return {
 				},
 			},
 
-			on_attach = function(_, bufnr)
-				require("jdtls.setup").add_commands()
-				local opts = { buffer = bufnr }
-			end,
+			on_attach = function(client, bufnr) end,
 		}
 
 		jdtls.start_or_attach(config)

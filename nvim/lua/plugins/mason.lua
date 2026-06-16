@@ -7,6 +7,7 @@ return {
 	config = function()
 		require("mason-lspconfig").setup({
 			ensure_installed = {
+        "lua_ls"
 				"html", -- html-lsp
 				"cssls", -- css-lsp
 				"ts_ls", -- typescript-language-server
