@@ -31,7 +31,7 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=nvim
 
-export JAVA_HOME=/usr/lib/jvm/java-21-jdk
+export JAVA_HOME=/usr/lib/jvm/java-25-jdk
 export PATH=$JAVA_HOME/bin:$PATH
 
 # Alias
@@ -67,3 +67,14 @@ clear-dependencies() {
 
 # Created by `pipx` on 2025-12-01 22:03:11
 export PATH="$PATH:/home/tux/.local/bin"
+export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(mise activate)"
+
+# pnpm
+export PNPM_HOME="/home/f1x1/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

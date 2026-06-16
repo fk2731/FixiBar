@@ -41,6 +41,13 @@ local servers = {
   "tailwindcss",
 }
 vim.lsp.enable(servers)
+vim.lsp.config("astro", {
+  init_options = {
+    typescript = {
+      tsdk = vim.fn.stdpath("data") .. "/mason/packages/typescript-language-server/node_modules/typescript/lib",
+    },
+  },
+})
 EOF
 
 	cat "$nvim_repo_path/autocmds.lua" >>"$nvim_config/autocmds.lua"
