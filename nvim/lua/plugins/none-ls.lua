@@ -20,14 +20,15 @@ return {
 					"prettier",
 					"eslint_d",
 					"clang-format",
-					"google-java-format",
 					"checkstyle",
 					"shfmt",
 					"shellcheck",
 					"markdownlint",
 				},
 				automatic_installation = true,
-				handlers = {},
+				handlers = {
+					["google_java_format"] = function() end,
+				},
 			})
 		end,
 	},
