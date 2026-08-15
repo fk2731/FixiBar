@@ -1,4 +1,3 @@
-
 -- ### FIXI MAPPINGS ###
 
 local opts = { noremap = true, silent = true }
@@ -90,7 +89,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
     opts.desc = "See available code actions"
     map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 
-    map({ "n" }, "<leader>f", vim.lsp.buf.format,opts)
+    map({ "n" }, "<leader>f", function()
+      vim.lsp.buf.format({
+        filter = function(client)
+          if vim.bo.filetype == "java" then
+            return client.name == "jdtls"
+          end
+          return true
+        end,
+      })
+    end, opts)
 
     opts.desc = "Smart rename"
     map("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
@@ -103,12 +111,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
     opts.desc = "Go to previous diagnostic"
     map("n", "[d", function()
-      vim.diagnostic.jump { count = -1, float = true }
+      vim.diagnostic.jump({ count = -1, float = true })
     end, opts) -- jump to previous diagnostic in buffer
     --
     opts.desc = "Go to next diagnostic"
     map("n", "]d", function()
-      vim.diagnostic.jump { count = 1, float = true }
+      vim.diagnostic.jump({ count = 1, float = true })
     end, opts) -- jump to next diagnostic in buffer
 
     opts.desc = "Show documentation for what is under cursor"
@@ -120,8 +128,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 map("n", "<leader>th", function()
-  require("nvchad.themes").open {
+  require("nvchad.themes").open({
     border = true,
-  }
+  })
 end, { desc = "Theme Picker" })
 
+vim.keymap.set("n", "<leader>fp", function()
+  local filePath = vim.fn.expand("%:.")               -- Gets the file path relative to the home directory
+  vim.fn.setreg("+", filePath)                        -- Copy the file path to the clipboard register
+  print("File path copied to clipboard: " .. filePath) -- Optional: print message to confirm
+end, { desc = "Copy file path to clipboard" })
