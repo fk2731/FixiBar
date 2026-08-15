@@ -1,7 +1,25 @@
 #!/usr/bin/env python3
-from fabric.hyprland.widgets import WorkspaceButton, Workspaces
+from typing import override
+
+from fabric.hyprland.widgets import WorkspaceButton, HyprlandWorkspaces
 
 from config import add_hover_cursor
+
+
+class Workspaces(HyprlandWorkspaces):
+    @override
+    def do_action_next(self):
+        arg = ("e" if not self._empty_scroll else "") + "+1"
+        return self.connection.send_command(f'batch/dispatch hl.dsp.focus({{workspace = "{arg}"}})')
+
+    @override
+    def do_action_previous(self):
+        arg = ("e" if not self._empty_scroll else "") + "-1"
+        return self.connection.send_command(f'batch/dispatch hl.dsp.focus({{workspace = "{arg}"}})')
+
+    @override
+    def do_button_clicked(self, button: WorkspaceButton):
+        return self.connection.send_command(f"batch/dispatch hl.dsp.focus({{workspace = {button.id}}})")
 
 
 # Name it like a class so it appears as a widget during import

@@ -18,7 +18,7 @@ buttons = [
     (
         "\ueba8",
         "Log Out\n<small> Ends the current Hyprland session.</small>",
-        ["hyprctl", "dispatch", "exit"],
+        ["hyprctl", "dispatch", "hl.dsp.exit()"],
     ),
     (
         "\ueaf8",

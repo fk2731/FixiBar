@@ -13,7 +13,7 @@ current_ws=$(hyprctl activeworkspace | grep 'ID' | awk 'NR==1 {print $3}')
 # Check if the current workspace is in use (has any client)
 if [[ -n $(hyprctl clients | grep "workspace" | grep "$current_ws") ]]; then
 	# Switch to an empty workspace
-	hyprctl dispatch workspace empty n+1 &
+	hyprctl dispatch 'hl.dsp.focus({workspace = "empty n+1"})' &
 	move=true
 fi
 
